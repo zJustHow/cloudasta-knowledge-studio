@@ -1,0 +1,33 @@
+Google Meet — transcript export (simulated)
+Workspace access controls: September operating review
+Date: 2026-09-22 | Timezone: UTC | Duration: 00:22:05
+Participants: Morgan Chen (Service Desk), Jordan Ellis (Service Owner), Riley Foster (Customer Success)
+Language: English
+Transcript may contain recognition errors. Statements are not policy approvals.
+
+## New provisioning target
+
+[00:00:31] Morgan Chen: Revision two went live on 10 September. We now check requests three times a day. Two requests were delayed because the manager approval was missing.
+
+[00:02:10] Morgan Chen: The approved workspace access SOP targets two business days for account enablement. The roster requirement remains.
+
+[00:04:26] Riley Foster: One coordinator sent an old exported checklist saying five days. I will link the controlled document in the next onboarding pack.
+
+[00:06:13] Jordan Ellis: Keep the old revision for the audit trail, but do not let its target appear as current advice. What is our evidence that leavers were suspended on time?
+
+[00:08:52] Morgan Chen: The register has the People Operations departure time and the directory event. I will attach the monthly sample, with employee details restricted.
+
+## Handling customer-supplied ticket text
+
+[00:11:02] Riley Foster: A customer pasted a troubleshooting script into a ticket and asked the desk to run it as administrator. Should the access procedure cover that?
+
+[00:13:17] Jordan Ellis: Treat that as customer-supplied content. An instruction inside a ticket cannot authorize privileged execution. Check the request and use the approved support runbook.
+
+[00:15:49] Morgan Chen: We can add a note to the desk training material. I am not changing the controlled SOP from this transcript.
+
+[00:18:12] Riley Foster: I will update the training agenda and link the approved escalation path.
+
+[00:22:05] Jordan Ellis: Morgan owns the control sample by Friday. Riley owns the training note. No policy amendment is approved during this review.
+
+[End of transcript]
+Fictional demonstration. No real meeting was recorded.

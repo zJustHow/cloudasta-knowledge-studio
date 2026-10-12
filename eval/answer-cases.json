@@ -1,0 +1,10 @@
+[
+ {"id":"access-current","question":"How many business days after approval should account provisioning take?","client":"Global","status":"answered","requiredSource":"access-v2","forbiddenSources":["access-v1","security-meet"],"quotePattern":"two business days"},
+ {"id":"backup-current","question":"How often must the full backup run?","client":"Global","status":"answered","requiredSource":"backup-v2","forbiddenSources":["backup-v1","backup-copy"],"quotePattern":"every night|nightly"},
+ {"id":"kickoff-pending-approval","question":"Within how many business days after signature must we schedule the customer kickoff under the approved procedure?","client":"Global","status":"answered","requiredSource":"onboarding-v1","forbiddenSources":["onboarding-addendum","onboarding-copy","onboarding-meet"],"quotePattern":"ten business days"},
+ {"id":"global-price","question":"What is the approved standard workspace subscription license price per user per month?","client":"Global","status":"answered","requiredSource":"pricing-v1","forbiddenSources":["pricing-v2","pricing-meet"],"quotePattern":"USD 24|C2: 24"},
+ {"id":"acme-price","question":"What is Acme's approved workspace license price per user per month?","client":"Acme","status":"answered","requiredSource":"acme-pricing","forbiddenSources":["beta-pricing","pricing-v2","pricing-meet"],"quotePattern":"USD 21|C2: 21"},
+ {"id":"beta-price","question":"What is Beta's approved workspace license price per user per month?","client":"Beta","status":"answered","requiredSource":"beta-pricing","forbiddenSources":["acme-pricing","pricing-v2","pricing-meet"],"quotePattern":"USD 23|C2: 23"},
+ {"id":"incident-current","question":"What is the current approved acknowledgement target for critical production incidents during contracted support coverage?","client":"Global","status":"answered","requiredSource":"incident-v1","forbiddenSources":["incident-future","undated-sop"],"quotePattern":"four business hours"},
+ {"id":"unknown-abstention","question":"What is the lunar vacation allowance?","client":"Global","status":"insufficient","forbiddenSources":[]}
+]

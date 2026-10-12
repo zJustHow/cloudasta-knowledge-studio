@@ -1,0 +1,473 @@
+{
+  "generatedAt": "2026-10-12T02:18:06.230Z",
+  "model": "qwen3.8-max-0902",
+  "job": "b9e14286-11a7-4936-9372-f6568b4fa542",
+  "correct": 7,
+  "total": 8,
+  "cases": [
+    {
+      "id": "access-current",
+      "question": "How many business days after approval should account provisioning take?",
+      "client": "Global",
+      "status": "answered",
+      "requiredSource": "access-v2",
+      "forbiddenSources": [
+        "access-v1",
+        "security-meet"
+      ],
+      "quotePattern": "two business days",
+      "passed": true,
+      "result": {
+        "id": "aafb916f-ba3d-4978-a8f8-b93c9968c0eb",
+        "question": "How many business days after approval should account provisioning take?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:17:52.879Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "access-v2:provisioning:0",
+            "docId": "access-v2",
+            "version": 1,
+            "key": "provisioning",
+            "text": "Provision a workspace account within two business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00, 12:00 and 15:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in.",
+            "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+            "hash": "3e1ed103a1bc2f6deb4beef86f83d80626bd5decc4cb930f3be27b3da19bec69",
+            "offset": 0,
+            "title": "Workspace access procedure | Revision 2.0",
+            "client": "Global",
+            "domain": "access",
+            "authority": "policy",
+            "keyword": 6.992772951151229,
+            "semantic": 0.7704978822825767,
+            "score": 0.06350806451612903,
+            "quote": "Provision a workspace account within two business days after approval."
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "backup-current",
+      "question": "How often must the full backup run?",
+      "client": "Global",
+      "status": "answered",
+      "requiredSource": "backup-v2",
+      "forbiddenSources": [
+        "backup-v1",
+        "backup-copy"
+      ],
+      "quotePattern": "every night|nightly",
+      "passed": true,
+      "result": {
+        "id": "2995bd92-6286-4434-b9a1-935f661ade33",
+        "question": "How often must the full backup run?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:17:55.460Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "backup-v2:schedule:0",
+            "docId": "backup-v2",
+            "version": 1,
+            "key": "schedule",
+            "text": "Run a full backup every night. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the nightly job by 09:00 UTC the following morning. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep fourteen daily recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption.",
+            "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+            "hash": "98458d372cefbf020efd04051de5ebaeb9657a4b3a60631c190cd11008a4ecb1",
+            "offset": 0,
+            "title": "Backup and recovery operations | Revision 2.0",
+            "client": "Global",
+            "domain": "backup",
+            "authority": "policy",
+            "keyword": 10.10008421738574,
+            "semantic": 0.9270089745429173,
+            "score": 0.06451612903225806,
+            "quote": "Run a full backup every night."
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "kickoff-pending-approval",
+      "question": "Within how many business days after signature must we schedule the customer kickoff under the approved procedure?",
+      "client": "Global",
+      "status": "answered",
+      "requiredSource": "onboarding-v1",
+      "forbiddenSources": [
+        "onboarding-addendum",
+        "onboarding-copy",
+        "onboarding-meet"
+      ],
+      "quotePattern": "ten business days",
+      "passed": true,
+      "result": {
+        "id": "ac5c586f-c4a0-4869-9293-c1da47cacdf7",
+        "question": "Within how many business days after signature must we schedule the customer kickoff under the approved procedure?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:17:57.451Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "onboarding-v1:kickoff:0",
+            "docId": "onboarding-v1",
+            "version": 1,
+            "key": "kickoff",
+            "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness.",
+            "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+            "hash": "4dd515cb8dbec0bed54c844385476760cf7d3ad32803163b5942b4602ea5d64b",
+            "offset": 0,
+            "title": "Customer onboarding and service acceptance",
+            "client": "Global",
+            "domain": "onboarding",
+            "authority": "policy",
+            "keyword": 11.457509834584346,
+            "semantic": 0.7587421001129327,
+            "score": 0.06451612903225806,
+            "quote": "Schedule the customer kickoff within ten business days after signature."
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "global-price",
+      "question": "What is the approved standard workspace subscription license price per user per month?",
+      "client": "Global",
+      "status": "answered",
+      "requiredSource": "pricing-v1",
+      "forbiddenSources": [
+        "pricing-v2",
+        "pricing-meet"
+      ],
+      "quotePattern": "USD 24|C2: 24",
+      "passed": false,
+      "result": {
+        "id": "d124b3b6-c53e-4fb3-ad6b-f1913cdcea94",
+        "question": "What is the approved standard workspace subscription license price per user per month?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:17:59.504Z",
+        "status": "conflict",
+        "message": "Approved sources disagree. Resolve the conflict before treating a value as current.",
+        "citations": [
+          {
+            "id": "pricing-copy:license:1",
+            "docId": "pricing-copy",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Standard workspace license pricing is USD 24 per user per month, billed annually. Minimum commitment: 50 seats.\nA3: LICENSE-02 | B3: Rate card FIN-2026-01 | Owner: Morgan Chen, Commercial Operations | Approved by: Casey Brooks, Finance | Currency: USD | Taxes: excluded\nA4: LICENSE-03 | B4: The workspace subscription covers the managed collaboration service and standard administration support. The rate is a fictional Cloudasta managed-service bundle, not a published vendor list price. Billing starts on the service commencement date in the executed order. Seat additions are co-termed to the annual renewal and prorated from the activation date. Reductions take effect at renewal, subject to the minimum commitment.\nA5: LICENSE-04 | B5: Quote the customer legal entity, billing entity, tenant domain, seat quantity, contract term and service start date. Pass-through taxes, third-party archival subscriptions and bespoke integrations are excluded unless the order itemizes them. A customer-specific approved schedule governs that customer's rate for its stated term; it does not update the general rate card.",
+            "location": "Sheet Subscription terms · 6 populated rows · segment 2",
+            "hash": "32a33e621202a7ca178979cbab72a4170db05906adc89ea63d5ab0ee036ab4ad",
+            "offset": 0,
+            "title": "Standard pricing · retained export",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 9.987885930262753,
+            "semantic": 0.8274790427776302,
+            "score": 0.06451612903225806,
+            "quote": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Standard workspace license pricing is USD 24 per user per month, billed annually. Minimum commitment: 50 seats.\nA3: LICENSE-02 | B3: Rate card FIN-2026-01 | Owner: Morgan Chen, Commercial Operations | Approved by: Casey Brooks, Finance | Currency: USD | Taxes: excluded\nA4: LICENSE-03 | B4: The workspace subscription covers the managed collaboration service and standard administration support. The rate is a fictional Cloudasta managed-service bundle, not a published vendor list price. Billing starts on the service commencement date in the executed order. Seat additions are co-termed to the annual renewal and prorated from the activation date. Reductions take effect at renewal, subject to the minimum commitment.\nA5: LICENSE-04 | B5: Quote the customer legal entity, billing entity, tenant domain, seat quantity, contract term and service start date. Pass-through taxes, third-party archival subscriptions and bespoke integrations are excluded unless the order itemizes them. A customer-specific approved schedule governs that customer's rate for its stated term; it does not update the general rate card."
+          },
+          {
+            "id": "pricing-v1:license:1",
+            "docId": "pricing-v1",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Standard workspace license pricing is USD 24 per user per month, billed annually. Minimum commitment: 50 seats.\nA3: LICENSE-02 | B3: Rate card FIN-2026-01 | Owner: Morgan Chen, Commercial Operations | Approved by: Casey Brooks, Finance | Currency: USD | Taxes: excluded\nA4: LICENSE-03 | B4: The workspace subscription covers the managed collaboration service and standard administration support. The rate is a fictional Cloudasta managed-service bundle, not a published vendor list price. Billing starts on the service commencement date in the executed order. Seat additions are co-termed to the annual renewal and prorated from the activation date. Reductions take effect at renewal, subject to the minimum commitment.\nA5: LICENSE-04 | B5: Quote the customer legal entity, billing entity, tenant domain, seat quantity, contract term and service start date. Pass-through taxes, third-party archival subscriptions and bespoke integrations are excluded unless the order itemizes them. A customer-specific approved schedule governs that customer's rate for its stated term; it does not update the general rate card.",
+            "location": "Sheet Subscription terms · 6 populated rows · segment 2",
+            "hash": "32a33e621202a7ca178979cbab72a4170db05906adc89ea63d5ab0ee036ab4ad",
+            "offset": 0,
+            "title": "Managed workspace commercial framework | 2026",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 9.959312036177149,
+            "semantic": 0.8251415429975856,
+            "score": 0.0625,
+            "quote": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Standard workspace license pricing is USD 24 per user per month, billed annually. Minimum commitment: 50 seats.\nA3: LICENSE-02 | B3: Rate card FIN-2026-01 | Owner: Morgan Chen, Commercial Operations | Approved by: Casey Brooks, Finance | Currency: USD | Taxes: excluded\nA4: LICENSE-03 | B4: The workspace subscription covers the managed collaboration service and standard administration support. The rate is a fictional Cloudasta managed-service bundle, not a published vendor list price. Billing starts on the service commencement date in the executed order. Seat additions are co-termed to the annual renewal and prorated from the activation date. Reductions take effect at renewal, subject to the minimum commitment.\nA5: LICENSE-04 | B5: Quote the customer legal entity, billing entity, tenant domain, seat quantity, contract term and service start date. Pass-through taxes, third-party archival subscriptions and bespoke integrations are excluded unless the order itemizes them. A customer-specific approved schedule governs that customer's rate for its stated term; it does not update the general rate card."
+          },
+          {
+            "id": "pricing-copy:license:0",
+            "docId": "pricing-copy",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved",
+            "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+            "hash": "a800b8a483bcd6d09cd5c53dbd044407397a89a15551ac27981841db9e023a09",
+            "offset": 0,
+            "title": "Standard pricing · retained export",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 6.588874865121975,
+            "semantic": 0.5230873708529128,
+            "score": 0.06060606060606061,
+            "quote": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+          },
+          {
+            "id": "pricing-v1:license:0",
+            "docId": "pricing-v1",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved",
+            "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+            "hash": "a800b8a483bcd6d09cd5c53dbd044407397a89a15551ac27981841db9e023a09",
+            "offset": 0,
+            "title": "Managed workspace commercial framework | 2026",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 6.550617822299431,
+            "semantic": 0.5196505115332639,
+            "score": 0.058823529411764705,
+            "quote": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+          },
+          {
+            "id": "pricing-copy:license:2",
+            "docId": "pricing-copy",
+            "version": 1,
+            "key": "license",
+            "text": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period.",
+            "location": "Sheet Subscription terms · 6 populated rows · segment 3",
+            "hash": "22e1b7eabc708281e787b6444ae99d9a89db90cd25fb5c3621676e24a5cf1006",
+            "offset": 1191,
+            "title": "Standard pricing · retained export",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 5.393192587325485,
+            "semantic": 0.4900331833896501,
+            "score": 0.05634920634920634,
+            "quote": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period."
+          },
+          {
+            "id": "pricing-v1:license:2",
+            "docId": "pricing-v1",
+            "version": 1,
+            "key": "license",
+            "text": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period.",
+            "location": "Sheet Subscription terms · 6 populated rows · segment 3",
+            "hash": "22e1b7eabc708281e787b6444ae99d9a89db90cd25fb5c3621676e24a5cf1006",
+            "offset": 1191,
+            "title": "Managed workspace commercial framework | 2026",
+            "client": "Global",
+            "domain": "pricing",
+            "authority": "policy",
+            "keyword": 5.359107310078873,
+            "semantic": 0.5143095122475823,
+            "score": 0.05634920634920634,
+            "quote": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period."
+          }
+        ],
+        "modelCalled": false
+      }
+    },
+    {
+      "id": "acme-price",
+      "question": "What is Acme's approved workspace license price per user per month?",
+      "client": "Acme",
+      "status": "answered",
+      "requiredSource": "acme-pricing",
+      "forbiddenSources": [
+        "beta-pricing",
+        "pricing-v2",
+        "pricing-meet"
+      ],
+      "quotePattern": "USD 21|C2: 21",
+      "passed": true,
+      "result": {
+        "id": "cfe4fe7d-e83d-4ddd-8c20-5c0bf5683611",
+        "question": "What is Acme's approved workspace license price per user per month?",
+        "client": "Acme",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:17:59.535Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "acme-pricing:license:1",
+            "docId": "acme-pricing",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Acme has an approved customer exception: USD 21 per user per month, billed annually, for 100 seats. This exception does not change the Global standard price.\nA3: LICENSE-02 | B3: Exception register: EX-ACM-2026-04 | Customer legal entity: Acme Field Services Ltd | Tenant: acme.example.invalid | Commercial owner: Casey Brooks | Approval: Finance, 1 April 2026\nA4: LICENSE-03 | B4: The approved subscription term is 1 April 2026 through 31 March 2027. The exception assumes an annual commitment of 100 seats. Additional seats during the term use the same unit rate and co-term to 31 March 2027. A reduction below the committed quantity requires a new approval and an amended order.\nA5: LICENSE-04 | B5: Rationale: Acme committed to a single annual invoice and supplied a referenceable deployment plan. The concession applies to the recurring managed workspace subscription only. Migration project services remain separately quoted, and the standard onboarding fee does not disappear because the subscription has an exception.",
+            "location": "Sheet Subscription terms · 7 populated rows · segment 2",
+            "hash": "24bd867a498c00eee06d512ed1278d6d616e9db79b394644820de23b6e2b4508",
+            "offset": 0,
+            "title": "Acme Field Services | Approved commercial schedule",
+            "client": "Acme",
+            "domain": "pricing",
+            "authority": "customer_exception",
+            "keyword": 10.271499400747896,
+            "semantic": 0.6990999399658792,
+            "score": 0.061669829222011384,
+            "quote": "Acme has an approved customer exception: USD 21 per user per month, billed annually, for 100 seats."
+          },
+          {
+            "id": "acme-pricing:license:0",
+            "docId": "acme-pricing",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 21 | D2: 100 seats | E2: Approved\nA3: Migration project services | B3: engagement | C3: 12000 | D3: Separately scoped and approved proposal | E3: Separate quote required",
+            "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+            "hash": "1f7d40a4ad66e663c6e90019f164e0a39c575752719c64f7f31e2e424e73fef3",
+            "offset": 0,
+            "title": "Acme Field Services | Approved commercial schedule",
+            "client": "Acme",
+            "domain": "pricing",
+            "authority": "customer_exception",
+            "keyword": 6.328117071614594,
+            "semantic": 0.39451427271621625,
+            "score": 0.054887218045112776,
+            "quote": "Managed workspace subscription | B2: user / month | C2: 21 | D2: 100 seats | E2: Approved"
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "beta-price",
+      "question": "What is Beta's approved workspace license price per user per month?",
+      "client": "Beta",
+      "status": "answered",
+      "requiredSource": "beta-pricing",
+      "forbiddenSources": [
+        "acme-pricing",
+        "pricing-v2",
+        "pricing-meet"
+      ],
+      "quotePattern": "USD 23|C2: 23",
+      "passed": true,
+      "result": {
+        "id": "dba6d252-2587-4ee4-b0e9-72a977c8ce31",
+        "question": "What is Beta's approved workspace license price per user per month?",
+        "client": "Beta",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:18:01.987Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "beta-pricing:license:1",
+            "docId": "beta-pricing",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Beta has an approved customer exception: USD 23 per user per month, billed annually, for 100 seats. This exception does not change the Global standard price.\nA3: LICENSE-02 | B3: Exception register: EX-BET-2026-04 | Customer legal entity: Beta Health Logistics Ltd | Tenant: beta.example.invalid | Commercial owner: Casey Brooks | Approval: Finance, 2 April 2026\nA4: LICENSE-03 | B4: The approved term runs from 15 April 2026 through 14 April 2027 and commits the customer to 100 seats. Seat additions co-term to the renewal date. The rate assumes annual billing and a single billing entity. Taxes and specialist data-retention services are excluded.\nA5: LICENSE-04 | B5: Finance accepted the concession because Beta agreed to consolidate the regional rollout under one order and nominate a central administrator. No customer data classification or clinical-workflow assurance forms part of this rate approval. Any restricted-data requirement needs a separate delivery and security assessment.\nA6: LICENSE-05 | B6: The customer asked for the Acme rate during negotiation. Finance declined that request and approved the distinct Beta rate recorded here. This is a customer-specific schedule, not a new global pricing policy. Migration services and implementation milestones remain separately governed.",
+            "location": "Sheet Subscription terms · 7 populated rows · segment 2",
+            "hash": "1cdfa8fc3693797c6bd0394a44b821bcc89a1962be8c3b419c34b6b7a17290f3",
+            "offset": 0,
+            "title": "Beta Health Logistics | Approved commercial schedule",
+            "client": "Beta",
+            "domain": "pricing",
+            "authority": "customer_exception",
+            "keyword": 10.72647814565785,
+            "semantic": 0.7853748432367778,
+            "score": 0.06350806451612903,
+            "quote": "Beta has an approved customer exception: USD 23 per user per month, billed annually, for 100 seats."
+          },
+          {
+            "id": "beta-pricing:license:0",
+            "docId": "beta-pricing",
+            "version": 1,
+            "key": "license",
+            "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 23 | D2: 100 seats | E2: Approved\nA3: Migration project services | B3: engagement | C3: 12000 | D3: Separately scoped and approved proposal | E3: Separate quote required",
+            "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+            "hash": "c7f236f80dbec5797c5513de11e5fae7711bd049bc69212dd36ecfa52b452ce4",
+            "offset": 0,
+            "title": "Beta Health Logistics | Approved commercial schedule",
+            "client": "Beta",
+            "domain": "pricing",
+            "authority": "customer_exception",
+            "keyword": 6.967641649995141,
+            "semantic": 0.4195602584889499,
+            "score": 0.05643879173290938,
+            "quote": "Managed workspace subscription | B2: user / month | C2: 23 | D2: 100 seats | E2: Approved"
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "incident-current",
+      "question": "What is the current approved acknowledgement target for critical production incidents during contracted support coverage?",
+      "client": "Global",
+      "status": "answered",
+      "requiredSource": "incident-v1",
+      "forbiddenSources": [
+        "incident-future",
+        "undated-sop"
+      ],
+      "quotePattern": "four business hours",
+      "passed": true,
+      "result": {
+        "id": "e8cb6a25-1dd0-46ba-a275-e600f5538578",
+        "question": "What is the current approved acknowledgement target for critical production incidents during contracted support coverage?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:18:04.695Z",
+        "status": "answered",
+        "message": "Qwen selected these verified original passages.",
+        "citations": [
+          {
+            "id": "incident-v1:response:0",
+            "docId": "incident-v1",
+            "version": 1,
+            "key": "response",
+            "text": "Acknowledge critical production incidents within four business hours during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline.",
+            "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+            "hash": "5dab995d306cd9a8ccf9c833002ef84abf3bb5dd16118207601b03d72aef626f",
+            "offset": 0,
+            "title": "Production incident response procedure",
+            "client": "Global",
+            "domain": "support",
+            "authority": "policy",
+            "keyword": 22.780251972483992,
+            "semantic": 0.9407033563099749,
+            "score": 0.06451612903225806,
+            "quote": "Acknowledge critical production incidents within four business hours during contracted support coverage."
+          }
+        ],
+        "modelCalled": true,
+        "model": "qwen3.8-max-0902"
+      }
+    },
+    {
+      "id": "unknown-abstention",
+      "question": "What is the lunar vacation allowance?",
+      "client": "Global",
+      "status": "insufficient",
+      "forbiddenSources": [],
+      "passed": true,
+      "result": {
+        "id": "8fa0bcce-f58e-418f-b518-8724267bd0f7",
+        "question": "What is the lunar vacation allowance?",
+        "client": "Global",
+        "history": false,
+        "mode": "qwen",
+        "at": "2026-10-12T02:18:06.203Z",
+        "status": "insufficient",
+        "message": "No sufficient eligible evidence was found.",
+        "citations": [],
+        "modelCalled": false
+      }
+    }
+  ],
+  "notes": "End-to-end retrieval and verified quotation selection. A conflict/abstention before inference can be caused by deterministic source gates. Citation text equality is validated by the application."
+}

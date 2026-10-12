@@ -1,0 +1,942 @@
+{
+  "generatedAt": "2026-10-12T02:17:46.395Z",
+  "benchmark": "Cloudasta native fictional corpus governance benchmark",
+  "benchmarkVersion": 1,
+  "model": "qwen3.8-max-0902",
+  "job": {
+    "id": "b9e14286-11a7-4936-9372-f6568b4fa542",
+    "status": "completed",
+    "completed": 30,
+    "total": 30,
+    "failures": 0,
+    "createdAt": "2026-10-12T02:02:51.296Z",
+    "finishedAt": "2026-10-12T02:17:28.347Z",
+    "modelCalls": 233,
+    "inputTokens": 1236652,
+    "outputTokens": 46698,
+    "elapsedSeconds": 877
+  },
+  "metrics": {
+    "relationshipRecall": {
+      "correct": 12,
+      "total": 12,
+      "percent": 100
+    },
+    "expectedActionAccuracy": {
+      "correct": 12,
+      "total": 12,
+      "percent": 100
+    },
+    "safetyChecks": {
+      "correct": 19,
+      "total": 19,
+      "percent": 100
+    },
+    "hybridProtocol": {
+      "correct": 30,
+      "total": 30,
+      "percent": 100
+    },
+    "citationValidity": {
+      "correct": 18,
+      "total": 18,
+      "percent": 100
+    },
+    "destructiveProposalPrecision": {
+      "correct": 11,
+      "total": 12,
+      "percent": 91.67
+    },
+    "toolErrors": 1
+  },
+  "relationships": [
+    {
+      "source": "access-v2",
+      "target": "access-v1",
+      "type": "full_supersedes",
+      "action": "executed",
+      "reason": "Approved complete low-risk access procedure revision.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "full_supersedes",
+          "keys": [
+            "provisioning",
+            "offboarding"
+          ],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "backup-v2",
+      "target": "backup-v1",
+      "type": "full_supersedes",
+      "action": "executed",
+      "reason": "Approved complete low-risk recovery procedure revision.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "full_supersedes",
+          "keys": [
+            "schedule",
+            "restore"
+          ],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "onboarding-copy",
+      "target": "onboarding-v1",
+      "type": "duplicate",
+      "action": "executed",
+      "reason": "Identical bytes and matching retention/scope.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "duplicate",
+          "keys": [
+            "kickoff",
+            "security",
+            "handoff"
+          ],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "backup-copy",
+      "target": "backup-v2",
+      "type": "duplicate",
+      "action": "executed",
+      "reason": "Identical bytes and matching retention/scope.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "duplicate",
+          "keys": [
+            "schedule",
+            "restore"
+          ],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "acme-qbr-copy",
+      "target": "acme-qbr-q2",
+      "type": "duplicate",
+      "action": "executed",
+      "reason": "Identical report export, same reporting period and account.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "duplicate",
+          "keys": [
+            "adoption",
+            "actions"
+          ],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "pricing-copy",
+      "target": "pricing-v1",
+      "type": "duplicate",
+      "action": "review",
+      "reason": "Identical bytes, but legal hold prevents automatic archival.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [],
+      "observedReviews": [
+        {
+          "type": "duplicate",
+          "keys": [
+            "license",
+            "onboarding",
+            "discount"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "source": "onboarding-addendum",
+      "target": "onboarding-v1",
+      "type": "partial_supersedes",
+      "action": "review",
+      "keys": [
+        "kickoff"
+      ],
+      "reason": "Only kickoff timing changes; amendment approval is pending.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [],
+      "observedReviews": [
+        {
+          "type": "partial_supersedes",
+          "keys": [
+            "kickoff"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "source": "pricing-v2",
+      "target": "pricing-v1",
+      "type": "full_supersedes",
+      "action": "review",
+      "reason": "Complete draft framework with a changed global rate; pending Finance approval.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [],
+      "observedReviews": [
+        {
+          "type": "full_supersedes",
+          "keys": [
+            "license",
+            "onboarding",
+            "discount"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "source": "acme-proposal-v2",
+      "target": "acme-proposal-v1",
+      "type": "full_supersedes",
+      "action": "review",
+      "reason": "Complete revised proposal; accelerated delivery is not approved.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [],
+      "observedReviews": [
+        {
+          "type": "full_supersedes",
+          "keys": [
+            "scope",
+            "commitment",
+            "commercial"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "source": "incident-future",
+      "target": "incident-v1",
+      "type": "full_supersedes",
+      "action": "review",
+      "reason": "Complete future-effective procedure must not activate early.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [],
+      "observedReviews": [
+        {
+          "type": "full_supersedes",
+          "keys": [
+            "response",
+            "escalation"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "source": "proposal-template",
+      "target": "legacy-pricing",
+      "type": "depends_on",
+      "action": "executed",
+      "reason": "Template explicitly cites an expired campaign source.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "depends_on",
+          "keys": [],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    },
+    {
+      "source": "acme-qbr-q2",
+      "target": "acme-qbr-q1",
+      "type": "coexists",
+      "action": "executed",
+      "reason": "Different reporting periods must remain separate historical observations.",
+      "labelCorrect": true,
+      "keysCorrect": true,
+      "actionCorrect": true,
+      "observedRelations": [
+        {
+          "type": "coexists",
+          "keys": [],
+          "executed": true
+        }
+      ],
+      "observedReviews": []
+    }
+  ],
+  "safety": [
+    {
+      "id": "approved-access-active",
+      "document": "access-v2",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "approved-backup-active",
+      "document": "backup-v2",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "draft-pricing-unapproved",
+      "document": "pricing-v2",
+      "field": "approval",
+      "equals": "draft",
+      "passed": true,
+      "observed": "draft"
+    },
+    {
+      "id": "global-price-retained",
+      "document": "pricing-v1",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "onboarding-approval-required",
+      "document": "onboarding-addendum",
+      "field": "approval",
+      "equals": "draft",
+      "passed": true,
+      "observed": "draft"
+    },
+    {
+      "id": "future-policy-not-retire-current",
+      "document": "incident-v1",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "legal-hold-preserved",
+      "document": "pricing-copy",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "q1-history-retained",
+      "document": "acme-qbr-q1",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "q2-history-retained",
+      "document": "acme-qbr-q2",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "other-customer-history-retained",
+      "document": "beta-qbr-q2",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "acme-exception-retained",
+      "document": "acme-pricing",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "beta-exception-retained",
+      "document": "beta-pricing",
+      "field": "knowledgeStatus",
+      "equals": "active",
+      "passed": true,
+      "observed": "active"
+    },
+    {
+      "id": "pricing-meeting-unapproved",
+      "document": "pricing-meet",
+      "field": "approval",
+      "equals": "draft",
+      "passed": true,
+      "observed": "draft"
+    },
+    {
+      "id": "onboarding-meeting-unapproved",
+      "document": "onboarding-meet",
+      "field": "approval",
+      "equals": "draft",
+      "passed": true,
+      "observed": "draft"
+    },
+    {
+      "id": "undated-escalated",
+      "document": "undated-sop",
+      "reviewRequired": true,
+      "passed": true,
+      "observed": [
+        "coexists",
+        "coexists"
+      ]
+    },
+    {
+      "id": "future-escalated",
+      "document": "incident-future",
+      "reviewRequired": true,
+      "passed": true,
+      "observed": [
+        "full_supersedes"
+      ]
+    },
+    {
+      "id": "pricing-draft-escalated",
+      "document": "pricing-v2",
+      "reviewRequired": true,
+      "passed": true,
+      "observed": [
+        "full_supersedes"
+      ]
+    },
+    {
+      "id": "proposal-revision-escalated",
+      "document": "acme-proposal-v2",
+      "reviewRequired": true,
+      "passed": true,
+      "observed": [
+        "full_supersedes"
+      ]
+    },
+    {
+      "id": "template-escalated",
+      "document": "proposal-template",
+      "reviewRequired": true,
+      "passed": true,
+      "observed": [
+        "approve_new"
+      ]
+    }
+  ],
+  "protocol": [
+    {
+      "document": "pricing-meet",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "incident-future",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "onboarding-meet",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "security-meet",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "onboarding-addendum",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "backup-copy",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-meet",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "backup-v2",
+      "bothSearches": true,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "document": "access-v2",
+      "bothSearches": true,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "document": "acme-proposal-v2",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "pricing-v2",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "qbr-guide",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "proposal-template",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-qbr-copy",
+      "bothSearches": true,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "document": "beta-qbr-q2",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-qbr-q2",
+      "bothSearches": true,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "document": "beta-proposal",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-proposal-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "beta-pricing",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-pricing",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "acme-qbr-q1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "incident-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "onboarding-copy",
+      "bothSearches": true,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "document": "onboarding-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "backup-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "pricing-copy",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "access-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "pricing-v1",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "legacy-pricing",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    },
+    {
+      "document": "undated-sop",
+      "bothSearches": true,
+      "status": "awaiting_admin",
+      "error": null
+    }
+  ],
+  "evidence": [
+    {
+      "source": "pricing-meet",
+      "target": "pricing-v1",
+      "type": "depends_on",
+      "validEvidence": true
+    },
+    {
+      "source": "pricing-meet",
+      "target": "pricing-v2",
+      "type": "depends_on",
+      "validEvidence": true
+    },
+    {
+      "source": "incident-future",
+      "target": "undated-sop",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "onboarding-meet",
+      "target": "onboarding-addendum",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "onboarding-meet",
+      "target": "onboarding-v1",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "onboarding-meet",
+      "target": "onboarding-copy",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "security-meet",
+      "target": "access-v2",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "security-meet",
+      "target": "access-v1",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "backup-copy",
+      "target": "backup-v2",
+      "type": "duplicate",
+      "validEvidence": true
+    },
+    {
+      "source": "acme-meet",
+      "target": "acme-proposal-v2",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "acme-meet",
+      "target": "acme-proposal-v1",
+      "type": "related",
+      "validEvidence": true
+    },
+    {
+      "source": "backup-v2",
+      "target": "backup-v1",
+      "type": "full_supersedes",
+      "validEvidence": true
+    },
+    {
+      "source": "access-v2",
+      "target": "access-v1",
+      "type": "full_supersedes",
+      "validEvidence": true
+    },
+    {
+      "source": "proposal-template",
+      "target": "legacy-pricing",
+      "type": "depends_on",
+      "validEvidence": true
+    },
+    {
+      "source": "acme-qbr-copy",
+      "target": "acme-qbr-q2",
+      "type": "duplicate",
+      "validEvidence": true
+    },
+    {
+      "source": "acme-qbr-copy",
+      "target": "acme-qbr-q1",
+      "type": "coexists",
+      "validEvidence": true
+    },
+    {
+      "source": "acme-qbr-q2",
+      "target": "acme-qbr-q1",
+      "type": "coexists",
+      "validEvidence": true
+    },
+    {
+      "source": "onboarding-copy",
+      "target": "onboarding-v1",
+      "type": "duplicate",
+      "validEvidence": true
+    }
+  ],
+  "destructiveProposals": [
+    {
+      "source": "backup-copy",
+      "target": "backup-v2",
+      "type": "duplicate",
+      "keys": [
+        "schedule",
+        "restore"
+      ],
+      "origin": "executed",
+      "correct": true,
+      "reason": "The current document backup-copy has identical hash (4109f101a2e7b6f70b25030c41e8ed3d53ac0a1ff00c102d0926c982e0631bfe) to backup-v2, confirming exact duplication. All chunk contents match verbatim between the two documents.",
+      "proposalReason": null
+    },
+    {
+      "source": "backup-v2",
+      "target": "backup-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "schedule",
+        "restore"
+      ],
+      "origin": "executed",
+      "correct": true,
+      "reason": "backup-v2 explicitly declares it replaces backup-v1 in both metadata (replaces field) and in restore:0 text stating 'Revision 2.0 replaces both operational clauses of revision 1.0'. The schedule clause changes from weekly Sunday backups with 4 weekly recovery points to nightly backups with 14 daily recovery points. The restore clause changes from quarterly drills to monthly drills with additional operator rotation requirements. Both operational clauses are substantively modified and the newer policy fully supersedes the older version.",
+      "proposalReason": null
+    },
+    {
+      "source": "access-v2",
+      "target": "access-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "provisioning",
+        "offboarding"
+      ],
+      "origin": "executed",
+      "correct": true,
+      "reason": "access-v2 explicitly states 'This revision replaces revision 1.0 in full'. Provisioning SLA reduced from 5 to 2 business days, queue check times updated from 09:00/14:00 to 09:00/12:00/15:00 UTC, and new daily readiness check with People Operations added. Offboarding section remains unchanged as confirmed in the document text. Document metadata shows access-v2 replaces access-v1.",
+      "proposalReason": null
+    },
+    {
+      "source": "acme-qbr-copy",
+      "target": "acme-qbr-q2",
+      "type": "duplicate",
+      "keys": [
+        "adoption",
+        "actions"
+      ],
+      "origin": "executed",
+      "correct": true,
+      "reason": "Document hashes are identical (58b962bd2f6dd29509c1f8e00aef9b4a26f7b9622574ebc8f3d8bf82fe260f10). The current document acme-qbr-copy is an exact copy of acme-qbr-q2 with only metadata differences (title includes 'copy' and date is 2026-07-01 vs 2026-06-25). All chunk content matches exactly.",
+      "proposalReason": null
+    },
+    {
+      "source": "onboarding-copy",
+      "target": "onboarding-v1",
+      "type": "duplicate",
+      "keys": [
+        "kickoff",
+        "security",
+        "handoff"
+      ],
+      "origin": "executed",
+      "correct": true,
+      "reason": "Document hashes are identical (bd54dfd87b23530d81d789d60916732e0f8f2b72b4ae29b257626e0ddeb8b1d0). The current document 'onboarding-copy' is an exact duplicate of the older policy document 'onboarding-v1'. All three sections (kickoff, security, handoff) have matching content.",
+      "proposalReason": null
+    },
+    {
+      "source": "incident-future",
+      "target": "incident-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "response",
+        "escalation"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Future effective date: keep the current policy until activation.",
+      "proposalReason": "The current document (incident-future) explicitly declares it replaces incident-v1 in its metadata. It updates the response time from four business hours to one business hour, effective 2027-01-01, while maintaining the same escalation procedures. The current document is an approved policy with a future effective date that will fully replace the older incident-v1 policy when it takes effect."
+    },
+    {
+      "source": "onboarding-addendum",
+      "target": "onboarding-v1",
+      "type": "partial_supersedes",
+      "keys": [
+        "kickoff"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Automatic replacement requires an explicit approved, effective, low-risk policy relation.",
+      "proposalReason": "The current addendum explicitly states it changes only the kickoff scheduling clause (from ten business days to three business days) while security checks and support handoff remain governed by the previous SOP. The addendum text confirms 'This amendment applies only to the scheduling clause in ONB-001, revision 1.0' and 'security approval gate, production migration controls, acceptance pack and support handoff are unchanged.' This is a partial supersession of the kickoff clause only."
+    },
+    {
+      "source": "backup-copy",
+      "target": "backup-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "schedule",
+        "restore"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Automatic replacement requires an explicit approved, effective, low-risk policy relation.",
+      "proposalReason": "The current document backup-copy is an exact duplicate of backup-v2, which explicitly states it replaces backup-v1. The content shows complete replacement: schedule changed from weekly Sunday backups to nightly backups with 14 daily recovery points instead of 4 weekly; restore drills changed from quarterly to monthly frequency. backup-v2:restore:0 explicitly states 'Revision 2.0 replaces both operational clauses of revision 1.0'."
+    },
+    {
+      "source": "acme-proposal-v2",
+      "target": "acme-proposal-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "scope",
+        "commitment",
+        "commercial"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Automatic replacement requires an explicit approved, effective, low-risk policy relation.",
+      "proposalReason": "Revised proposal v2 explicitly replaces v1 per metadata. Materially updates delivery plan from six weeks to four weeks (commitment section) while restating identical scope and commercial terms. Serves as the new authoritative proposal document covering all prior clauses."
+    },
+    {
+      "source": "pricing-v2",
+      "target": "pricing-v1",
+      "type": "full_supersedes",
+      "keys": [
+        "license",
+        "onboarding",
+        "discount"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Automatic replacement requires an explicit approved, effective, low-risk policy relation.",
+      "proposalReason": "pricing-v2 explicitly declares replaces:pricing-v1 in metadata. The license section has material changes: rate increased from USD 24 to USD 28 per user/month, status changed from Approved to Draft, rate card updated to FIN-2026-09-DRAFT, and new LICENSE-06 clause added with revision rationale citing higher delivery labor and expanded administration coverage. Onboarding and discount sections are textually identical but carried forward as part of the complete policy replacement. This is a unified pricing framework where all sections must be evaluated together under the new version."
+    },
+    {
+      "source": "incident-v1",
+      "target": "undated-sop",
+      "type": "full_supersedes",
+      "keys": [
+        "response"
+      ],
+      "origin": "review",
+      "correct": false,
+      "reason": "Automatic replacement requires an explicit approved, effective, low-risk policy relation.",
+      "proposalReason": "The current document (incident-v1) is an approved policy with effective date 2026-03-02 that establishes formal incident response procedures including acknowledgement targets (four business hours during contracted support coverage), severity definitions, and escalation protocols. The older document (undated-sop) is explicitly an unapproved draft working note with no effective date, no approval record, and contains unresolved open questions about staffing, coverage windows, and severity handling. The current document provides the finalized, authoritative procedures that replace the preliminary planning notes. The older document itself states it should remain as planning history while provenance is investigated, confirming it was never intended as operational policy."
+    },
+    {
+      "source": "pricing-copy",
+      "target": "pricing-v1",
+      "type": "duplicate",
+      "keys": [
+        "license",
+        "onboarding",
+        "discount"
+      ],
+      "origin": "review",
+      "correct": true,
+      "reason": "Retention restrictions require administrator review.",
+      "proposalReason": "Document hashes are identical (4c4822f8fb9ebc6f855847de4fd27f277be5be82e6b5dc3df3947e83b704d9e2), confirming exact content duplication. The current document 'pricing-copy' is a retained export copy of the older 'pricing-v1' with different metadata (title, date, retention status) but identical chunk content across all sections (license, onboarding, discount)."
+    }
+  ],
+  "toolErrors": [
+    {
+      "id": "1d7ef7cc-1120-4744-910e-2f5bcfd3fdfc",
+      "at": "2026-10-12T02:10:05.306Z",
+      "job": "b9e14286-11a7-4936-9372-f6568b4fa542",
+      "document": "acme-proposal-v2",
+      "tool": "tool_error",
+      "input": {
+        "tool": "submit_decision",
+        "arguments": "{\"target\": \"acme-proposal-v1\", \"type\": \"full_supersedes\", \"keys\": \n[\"commitment\"]\n\n, \"reason\": \"Revised proposal v2 explicitly replaces v1 per metadata. Materially updates delivery plan from six weeks to four weeks (commitment section) while restating identical scope and commercial terms. Serves as the new authoritative proposal document.\", \"evidence\": \n[\"acme-proposal-v2:commitment:0\", \"acme-proposal-v1:commitment:0\"]\n\n}"
+      },
+      "output": {
+        "error": "Full replacement must cover every previous clause."
+      },
+      "mode": "qwen"
+    }
+  ],
+  "limitations": [
+    "This is one run on 30 authored fictional files, not a production accuracy estimate.",
+    "Relationship recall scores 12 selected required pairs. Destructive proposal precision checks duplicates by exact hash and replacements against authored cases, allowing byte-identical source/target exports; related/coexists/depends_on precision still requires manual review.",
+    "Safety check success may result from deterministic policy gates even when model proposals are wrong.",
+    "Citation IDs being valid does not by itself establish that the cited text entails the decision. Manual passage review is required.",
+    "Current index, audit and trace retention must be unchanged for comparison with this job."
+  ]
+}

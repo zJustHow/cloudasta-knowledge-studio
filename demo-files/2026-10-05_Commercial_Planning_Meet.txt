@@ -1,0 +1,47 @@
+Google Meet — transcript export (simulated)
+Commercial planning: FY27 managed workspace rates
+Date: 2026-10-05 | Timezone: UTC | Duration: 00:28:46
+Participants: Morgan Chen (Commercial Operations), Casey Brooks (Finance), Alex Rivera (Delivery), Riley Foster (Customer Success)
+Language: English
+Transcript may contain recognition errors. Statements are not policy approvals.
+
+## Pricing options
+
+[00:00:14] Morgan Chen: Thanks. The goal today is to choose which scenarios Finance should model. We are not approving a new rate card on this call.
+
+[00:01:20] Morgan Chen: One sales request is USD 19 per user per month for the standard workspace service. At that price, what would we need to remove from the delivery package?
+
+[00:02:03] Casey Brooks: First we need the hours per tenant. The approved general schedule is still USD 24 and the September USD 28 draft is unsigned. Neither of those facts supports a USD 19 quote.
+
+[00:03:11] Alex Rivera: The subscription includes administration support. If you remove that, we would be selling a different service. Implementation effort is also separate.
+
+[00:04:02] Riley Foster: Acme is at USD 21 under its signed exception. Customers ask why the saved global spreadsheet shows another number. We should make the customer scope obvious.
+
+[00:05:18] Casey Brooks: Agreed. Acme does not create a precedent for Beta, and neither exception changes the global schedule.
+
+[00:06:42] Morgan Chen: For the model, I will compare 50, 100 and 250 seats. I will keep annual billing constant so we can see the cost effect.
+
+[00:08:06] Alex Rivera: Please show the cost of a second cutover. The current standard package assumes one production migration. We keep giving away extra weekends.
+
+[00:10:21] Morgan Chen: Could we label the nineteen-dollar option as self-service and exclude the managed support work?
+
+[00:12:33] Casey Brooks: You can model it as a separate product hypothesis. Do not put it in the quote template or rename the current subscription before approval.
+
+## Decisions and follow-up
+
+[00:14:05] Riley Foster: What should Customer Success say when a renewal customer asks about the draft increase?
+
+[00:15:17] Casey Brooks: Use the approved schedule or the customers current signed exception. For anything outside those terms, request a quote review.
+
+[00:17:09] Alex Rivera: Delivery can provide a sample of eight recent onboarding engagements by Friday, with pilot and remediation hours separated.
+
+[00:19:43] Morgan Chen: I own the scenarios and will circulate them on 9 October. Casey owns the margin check. No revised rate is approved today.
+
+[00:22:18] Riley Foster: I will review the renewal tracker for exceptions expiring in the next ninety days.
+
+[00:25:04] Casey Brooks: Finance still has not approved the September draft. Keep using the approved standard pricing framework until the formal decision.
+
+[00:28:46] Morgan Chen: That is the action list. We will schedule a decision meeting after the cost review.
+
+[End of transcript]
+Fictional demonstration. No real meeting was recorded.

@@ -1,0 +1,21 @@
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+.secrets/
+
+# Runtime data and dependencies
+var/
+*.sqlite*
+node_modules/
+
+# Generated output
+.build/
+output/
+*.log
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db

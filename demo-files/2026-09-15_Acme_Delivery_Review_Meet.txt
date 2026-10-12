@@ -1,0 +1,41 @@
+Google Meet — transcript export (simulated)
+Acme migration: revised delivery window review
+Date: 2026-09-15 | Timezone: UTC | Duration: 00:31:09
+Participants: Alex Rivera (Delivery), Riley Foster (Customer Success), Sam Patel (Acme Operations), Dana Lewis (Acme IT)
+Language: English
+Transcript may contain recognition errors. Statements are not policy approvals.
+
+## Four-week proposal and readiness
+
+[00:00:19] Sam Patel: Our depot opening moved forward. Can we finish the migration before the October rota starts?
+
+[00:03:20] Alex Rivera: The revised proposal mentions four weeks. Engineering has not committed. The earlier proposal stated six weeks and allowed time for identity remediation.
+
+[00:05:02] Dana Lewis: We have the 100 mailbox list, but twelve shared mailboxes still need an owner. The archive vendor has not confirmed export access.
+
+[00:07:18] Alex Rivera: Those are prerequisites, not small details. We can overlap discovery and training, but I cannot schedule the cutover until the pilot reconciles.
+
+[00:09:33] Riley Foster: The commercial total is still USD 12000. Does the accelerated window add weekend coverage or remove anything?
+
+[00:11:46] Alex Rivera: Neither is approved. The draft assumes customer approvals in one working day and a clean pilot. We need the delivery owner to accept those assumptions.
+
+[00:14:10] Sam Patel: Please show the four-week option and the fallback explicitly. I do not want the depot managers to hear a date that later moves.
+
+[00:16:52] Dana Lewis: I can deliver shared mailbox owners by 18 September. Archive access may take another week.
+
+## Ownership and customer communication
+
+[00:19:07] Riley Foster: I will mark revision two as under delivery review. We should not forward it as a confirmed schedule.
+
+[00:21:18] Alex Rivera: Escalate the delivery commitment to the administrator and service owner before sharing it as confirmed. Include the open prerequisites.
+
+[00:23:44] Sam Patel: Agreed. Keep the six-week fallback in the steering note and tell us what would need to be true for four weeks.
+
+[00:26:03] Dana Lewis: My action is the owner roster and the archive escalation. I will send evidence to the delivery record, without passwords.
+
+[00:28:39] Riley Foster: Alex owns the feasibility review by 21 September. I own the revised customer note after that review. No new price or contract term is approved here.
+
+[00:31:09] Alex Rivera: We will decide after the prerequisites and pilot plan are checked.
+
+[End of transcript]
+Fictional demonstration. No real meeting was recorded.

@@ -1,0 +1,14 @@
+{
+  "name": "cloudasta-agentic-rag",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic knowledge cleanup with hybrid retrieval, bounded agents and administrator review",
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.cjs",
+    "test": "node --test test/*.test.cjs",
+    "generate": "node scripts/generate.cjs"
+  }
+}

@@ -1,0 +1,39 @@
+Google Meet — transcript export (simulated)
+September onboarding retrospective
+Date: 2026-09-25 | Timezone: UTC | Duration: 00:24:18
+Participants: Riley Foster (Customer Success), Alex Rivera (Delivery), Morgan Chen (Operations), Jordan Ellis (Service Owner)
+Language: English
+Transcript may contain recognition errors. Statements are not policy approvals.
+
+## Signature-to-kickoff delay
+
+[00:00:12] Riley Foster: We looked at eight August starts. Three waited more than a week before the first delivery conversation. Two questionnaires sat unanswered because nobody knew which administrator should complete them.
+
+[00:02:00] Jordan Ellis: The three-business-day kickoff amendment is proposed. I have not signed it yet. Can we explain how the delivery team will reserve capacity?
+
+[00:03:22] Alex Rivera: I can reserve Tuesday and Thursday slots, but Sales must check with the delivery lead before calling a date committed. A missing questionnaire should become an action at kickoff.
+
+[00:05:06] Morgan Chen: Do we start from the signed order or the handoff email? Otherwise the metric will look better if the account owner delays the email.
+
+[00:06:17] Riley Foster: Signature date. I will also record the handoff date so we can see that delay. Customer-requested postponements should be a separate reason code.
+
+[00:08:42] Jordan Ellis: Good. Give me a four-week trial plan with the two reserved slots and a deputy. I need that before approving the amendment.
+
+[00:10:14] Riley Foster: I will send it on Monday. The original ten-business-day clause remains the approved one until we have the signature.
+
+## Security gates and handoff
+
+[00:12:03] Alex Rivera: Scheduling earlier does not mean we can skip tenant permissions or data handling. Security approval remains a gate before the pilot.
+
+[00:14:15] Morgan Chen: Keep the existing security checks and handoff steps. The amendment changes kickoff timing only.
+
+[00:16:41] Jordan Ellis: Also keep the qualified acceptance path. A customer can accept a launch with named residual issues, but those issues need owners.
+
+[00:18:20] Riley Foster: I will link the current security and handoff sections in the amendment rather than paste a second copy.
+
+[00:21:09] Alex Rivera: One training request is still open for the Acme depot cohort. That belongs in its QBR action register, not in the general onboarding procedure.
+
+[00:24:18] Jordan Ellis: Actions: Riley owns the trial plan, Alex confirms slot coverage, and I review the amendment after both are recorded.
+
+[End of transcript]
+Fictional demonstration. No real meeting was recorded.

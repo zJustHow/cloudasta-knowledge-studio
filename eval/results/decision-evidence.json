@@ -1,0 +1,1051 @@
+[
+  {
+    "source": "pricing-meet",
+    "target": "pricing-v1",
+    "type": "depends_on",
+    "keys": [],
+    "reason": "Meeting transcript explicitly references the approved USD 24 pricing framework (pricing-v1) as the current authoritative schedule and instructs to keep using it until formal decision. The meeting does not approve any new rates and depends on pricing-v1 as the operative policy.",
+    "evidence": [
+      {
+        "id": "pricing-meet:license:0",
+        "location": "Lines 8 · [00:00:14] · segment 1",
+        "text": "[00:00:14] Morgan Chen: Thanks. The goal today is to choose which scenarios Finance should model. We are not approving a new rate card on this call.\n\n[00:01:20] Morgan Chen: One sales request is USD 19 per user per month for the standard workspace service. At that price, what would we need to remove from the delivery package?\n\n[00:02:03] Casey Brooks: First we need the hours per tenant. The approved general schedule is still USD 24 and the September USD 28 draft is unsigned. Neither of those facts supports a USD 19 quote.\n\n[00:03:11] Alex Rivera: The subscription includes administration support. If you remove that, we would be selling a different service. Implementation effort is also separate.\n\n[00:04:02] Riley Foster: Acme is at USD 21 under its signed exception. Customers ask why the saved global spreadsheet shows another number. We should make the customer scope obvious.\n\n[00:05:18] Casey Brooks: Agreed. Acme does not create a precedent for Beta, and neither exception changes the global schedule.\n\n[00:06:42] Morgan Chen: For the model, I will compare 50, 100 and 250 seats. I will keep annual billing constant so we can see the cost effect.\n\n[00:08:06] Alex Rivera: Please show the cost of a second cutover. The current standard package assumes one production migration. We keep giving away extra weekends."
+      },
+      {
+        "id": "pricing-v1:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      }
+    ]
+  },
+  {
+    "source": "pricing-meet",
+    "target": "pricing-v2",
+    "type": "depends_on",
+    "keys": [],
+    "reason": "Meeting transcript references the September USD 28 draft (pricing-v2) as unsigned and not approved, and discusses modeling scenarios (50, 100, 250 seats) that align with pricing-v2's margin sensitivity review request. The meeting depends on pricing-v2 as the draft under consideration but does not approve it.",
+    "evidence": [
+      {
+        "id": "pricing-meet:license:0",
+        "location": "Lines 8 · [00:00:14] · segment 1",
+        "text": "[00:00:14] Morgan Chen: Thanks. The goal today is to choose which scenarios Finance should model. We are not approving a new rate card on this call.\n\n[00:01:20] Morgan Chen: One sales request is USD 19 per user per month for the standard workspace service. At that price, what would we need to remove from the delivery package?\n\n[00:02:03] Casey Brooks: First we need the hours per tenant. The approved general schedule is still USD 24 and the September USD 28 draft is unsigned. Neither of those facts supports a USD 19 quote.\n\n[00:03:11] Alex Rivera: The subscription includes administration support. If you remove that, we would be selling a different service. Implementation effort is also separate.\n\n[00:04:02] Riley Foster: Acme is at USD 21 under its signed exception. Customers ask why the saved global spreadsheet shows another number. We should make the customer scope obvious.\n\n[00:05:18] Casey Brooks: Agreed. Acme does not create a precedent for Beta, and neither exception changes the global schedule.\n\n[00:06:42] Morgan Chen: For the model, I will compare 50, 100 and 250 seats. I will keep annual billing constant so we can see the cost effect.\n\n[00:08:06] Alex Rivera: Please show the cost of a second cutover. The current standard package assumes one production migration. We keep giving away extra weekends."
+      },
+      {
+        "id": "pricing-v2:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 28 | D2: Minimum 50 seats; annual billing | E2: Draft\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Draft"
+      }
+    ]
+  },
+  {
+    "source": "incident-future",
+    "target": "undated-sop",
+    "type": "related",
+    "keys": [],
+    "reason": "The undated-sop is an unapproved working note/draft with no effective date or approval record, explicitly stating it cannot guide customer commitments. The current document (incident-future) is an approved policy with a defined effective date. They share subject matter (incident acknowledgement targets) but the draft has no authority and serves only as planning history. No conflict or replacement relationship exists.",
+    "evidence": [
+      {
+        "id": "incident-future:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within one business hour during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      },
+      {
+        "id": "undated-sop:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge all critical production incidents within 30 minutes. This document has no verified approval or effective date.\nWorking note recovered from the support planning folder. Author field: not recorded. Approval field: empty. The file contains no effective date or reference to an executed support schedule.\nProposed operating approach: place every critical customer report in a single monitored queue and assign an engineer before the first acknowledgement. The proposed 30-minute target assumes continuous staffing, but the draft has no staffing calculation or approved on-call arrangement. Customer coverage windows are not reconciled with the target.\nOpen points in the margin: Who owns weekends? Does the clock start from the customer email or the monitoring alert? How are severity disagreements handled? Which customer schedules would need amendment? The support lead must resolve these questions and obtain an approval record before this note can guide customer commitments.\nThe document should remain available as planning history while its provenance is investigated. An updated filename or a recent export time would not establish the missing business date."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-meet",
+    "target": "onboarding-addendum",
+    "type": "related",
+    "keys": [],
+    "reason": "The current meeting transcript discusses the proposed kickoff scheduling amendment documented in onboarding-addendum. The meeting notes reference the amendment ('The three-business-day kickoff amendment is proposed') and provide operational context (trial plan, slot reservations) but do not supersede or conflict with the amendment. The meeting confirms the amendment is not yet signed and the original policy remains in effect. Both documents coexist as complementary records - the amendment as a proposed policy change and the meeting as a discussion record about its implementation.",
+    "evidence": [
+      {
+        "id": "onboarding-meet:kickoff:0",
+        "location": "Lines 8 · [00:00:12] · segment 1",
+        "text": "[00:00:12] Riley Foster: We looked at eight August starts. Three waited more than a week before the first delivery conversation. Two questionnaires sat unanswered because nobody knew which administrator should complete them.\n\n[00:02:00] Jordan Ellis: The three-business-day kickoff amendment is proposed. I have not signed it yet. Can we explain how the delivery team will reserve capacity?\n\n[00:03:22] Alex Rivera: I can reserve Tuesday and Thursday slots, but Sales must check with the delivery lead before calling a date committed. A missing questionnaire should become an action at kickoff.\n\n[00:05:06] Morgan Chen: Do we start from the signed order or the handoff email? Otherwise the metric will look better if the account owner delays the email.\n\n[00:06:17] Riley Foster: Signature date. I will also record the handoff date so we can see that delay. Customer-requested postponements should be a separate reason code.\n\n[00:08:42] Jordan Ellis: Good. Give me a four-week trial plan with the two reserved slots and a deputy. I need that before approving the amendment.\n\n[00:10:14] Riley Foster: I will send it on Monday. The original ten-business-day clause remains the approved one until we have the signature."
+      },
+      {
+        "id": "onboarding-addendum:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within three business days after signature. Collect tenant domain and administrator contact. This amendment changes only kickoff scheduling; security checks and support handoff remain governed by the previous SOP.\nChange request OPS-026 | Owner: Riley Foster | Approval requested: 20 September 2026\nThe change addresses the gap between signature and the first delivery conversation. In the August cohort, three of eight customers waited more than a week before discovery began. Sales may reserve provisional kickoff slots, but the delivery lead must confirm capacity before the invitation describes a date as committed.\nCustomer Success must propose at least two slots within one working day of receiving the executed order. The readiness questionnaire may remain incomplete at kickoff; use the meeting to assign the missing inputs rather than waiting silently for a perfect questionnaire. Record customer-requested delays separately from internal capacity delays."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-meet",
+    "target": "onboarding-v1",
+    "type": "related",
+    "keys": [],
+    "reason": "The current meeting transcript references and discusses the existing onboarding policy (onboarding-v1). The meeting explicitly states 'The original ten-business-day clause remains the approved one until we have the signature', confirming the existing policy remains in effect. The meeting does not supersede, conflict with, or duplicate the policy document. They are related as the meeting provides discussion context around the existing policy and proposed changes to it.",
+    "evidence": [
+      {
+        "id": "onboarding-meet:kickoff:0",
+        "location": "Lines 8 · [00:00:12] · segment 1",
+        "text": "[00:00:12] Riley Foster: We looked at eight August starts. Three waited more than a week before the first delivery conversation. Two questionnaires sat unanswered because nobody knew which administrator should complete them.\n\n[00:02:00] Jordan Ellis: The three-business-day kickoff amendment is proposed. I have not signed it yet. Can we explain how the delivery team will reserve capacity?\n\n[00:03:22] Alex Rivera: I can reserve Tuesday and Thursday slots, but Sales must check with the delivery lead before calling a date committed. A missing questionnaire should become an action at kickoff.\n\n[00:05:06] Morgan Chen: Do we start from the signed order or the handoff email? Otherwise the metric will look better if the account owner delays the email.\n\n[00:06:17] Riley Foster: Signature date. I will also record the handoff date so we can see that delay. Customer-requested postponements should be a separate reason code.\n\n[00:08:42] Jordan Ellis: Good. Give me a four-week trial plan with the two reserved slots and a deputy. I need that before approving the amendment.\n\n[00:10:14] Riley Foster: I will send it on Monday. The original ten-business-day clause remains the approved one until we have the signature."
+      },
+      {
+        "id": "onboarding-v1:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-meet",
+    "target": "onboarding-copy",
+    "type": "related",
+    "keys": [],
+    "reason": "The current meeting transcript references the existing onboarding policy. onboarding-copy is an exact duplicate of onboarding-v1 (same document hash) and contains the same 10-business-day kickoff policy. The meeting confirms 'The original ten-business-day clause remains the approved one', referencing this policy. The meeting does not supersede or conflict with this document. They are related as the meeting discusses the policy context.",
+    "evidence": [
+      {
+        "id": "onboarding-meet:kickoff:0",
+        "location": "Lines 8 · [00:00:12] · segment 1",
+        "text": "[00:00:12] Riley Foster: We looked at eight August starts. Three waited more than a week before the first delivery conversation. Two questionnaires sat unanswered because nobody knew which administrator should complete them.\n\n[00:02:00] Jordan Ellis: The three-business-day kickoff amendment is proposed. I have not signed it yet. Can we explain how the delivery team will reserve capacity?\n\n[00:03:22] Alex Rivera: I can reserve Tuesday and Thursday slots, but Sales must check with the delivery lead before calling a date committed. A missing questionnaire should become an action at kickoff.\n\n[00:05:06] Morgan Chen: Do we start from the signed order or the handoff email? Otherwise the metric will look better if the account owner delays the email.\n\n[00:06:17] Riley Foster: Signature date. I will also record the handoff date so we can see that delay. Customer-requested postponements should be a separate reason code.\n\n[00:08:42] Jordan Ellis: Good. Give me a four-week trial plan with the two reserved slots and a deputy. I need that before approving the amendment.\n\n[00:10:14] Riley Foster: I will send it on Monday. The original ten-business-day clause remains the approved one until we have the signature."
+      },
+      {
+        "id": "onboarding-copy:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      }
+    ]
+  },
+  {
+    "source": "security-meet",
+    "target": "access-v2",
+    "type": "related",
+    "keys": [],
+    "reason": "The meeting transcript is an operational review discussing the implementation of the workspace access procedure (Revision 2.0). The meeting explicitly states 'No policy amendment is approved during this review' and references the existing SOP targets. Meetings cannot automatically replace policies, and this transcript serves as a record of operational discussion rather than a policy document. The meeting references access-v2's provisioning timeline and control sample requirements without modifying them.",
+    "evidence": [
+      {
+        "id": "security-meet:provisioning:0",
+        "location": "Lines 8 · [00:00:31] · segment 1",
+        "text": "[00:00:31] Morgan Chen: Revision two went live on 10 September. We now check requests three times a day. Two requests were delayed because the manager approval was missing.\n\n[00:02:10] Morgan Chen: The approved workspace access SOP targets two business days for account enablement. The roster requirement remains.\n\n[00:04:26] Riley Foster: One coordinator sent an old exported checklist saying five days. I will link the controlled document in the next onboarding pack.\n\n[00:06:13] Jordan Ellis: Keep the old revision for the audit trail, but do not let its target appear as current advice. What is our evidence that leavers were suspended on time?\n\n[00:08:52] Morgan Chen: The register has the People Operations departure time and the directory event. I will attach the monthly sample, with employee details restricted."
+      },
+      {
+        "id": "access-v2:provisioning:0",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+        "text": "Provision a workspace account within two business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00, 12:00 and 15:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in."
+      }
+    ]
+  },
+  {
+    "source": "security-meet",
+    "target": "access-v1",
+    "type": "related",
+    "keys": [],
+    "reason": "The meeting transcript references the old revision (access-v1) in the context of ensuring it is retained for audit trail purposes but not used as current advice. The meeting notes that a coordinator sent an old checklist with five-day targets, which corresponds to access-v1's provisioning timeline. This is an operational discussion about historical document retention rather than a policy change.",
+    "evidence": [
+      {
+        "id": "security-meet:provisioning:0",
+        "location": "Lines 8 · [00:00:31] · segment 1",
+        "text": "[00:00:31] Morgan Chen: Revision two went live on 10 September. We now check requests three times a day. Two requests were delayed because the manager approval was missing.\n\n[00:02:10] Morgan Chen: The approved workspace access SOP targets two business days for account enablement. The roster requirement remains.\n\n[00:04:26] Riley Foster: One coordinator sent an old exported checklist saying five days. I will link the controlled document in the next onboarding pack.\n\n[00:06:13] Jordan Ellis: Keep the old revision for the audit trail, but do not let its target appear as current advice. What is our evidence that leavers were suspended on time?\n\n[00:08:52] Morgan Chen: The register has the People Operations departure time and the directory event. I will attach the monthly sample, with employee details restricted."
+      },
+      {
+        "id": "access-v1:provisioning:0",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+        "text": "Provision a workspace account within five business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00 and 14:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in."
+      }
+    ]
+  },
+  {
+    "source": "backup-copy",
+    "target": "backup-v2",
+    "type": "duplicate",
+    "keys": [
+      "schedule",
+      "restore"
+    ],
+    "reason": "The current document backup-copy has identical hash (4109f101a2e7b6f70b25030c41e8ed3d53ac0a1ff00c102d0926c982e0631bfe) to backup-v2, confirming exact duplication. All chunk contents match verbatim between the two documents.",
+    "evidence": [
+      {
+        "id": "backup-copy:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every night. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the nightly job by 09:00 UTC the following morning. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep fourteen daily recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-v2:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every night. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the nightly job by 09:00 UTC the following morning. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep fourteen daily recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-copy:schedule:1",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 2",
+        "text": "The nightly run starts at 01:00 UTC. The operations lead approved this revision after the August drill exposed a five-day gap in recoverable migration manifests. Retention holds and key separation remain unchanged."
+      },
+      {
+        "id": "backup-v2:schedule:1",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 2",
+        "text": "The nightly run starts at 01:00 UTC. The operations lead approved this revision after the August drill exposed a five-day gap in recoverable migration manifests. Retention holds and key separation remain unchanged."
+      },
+      {
+        "id": "backup-copy:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 20 · segment 1",
+        "text": "Test a sample restoration every month and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The monthly report lists missed drills separately from failed restorations.\nRun the monthly drill during the second working week and rotate the operator so recovery does not depend on one person. Jordan signs the drill result before month end. Revision 2.0 replaces both operational clauses of revision 1.0."
+      },
+      {
+        "id": "backup-v2:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 20 · segment 1",
+        "text": "Test a sample restoration every month and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The monthly report lists missed drills separately from failed restorations.\nRun the monthly drill during the second working week and rotate the operator so recovery does not depend on one person. Jordan signs the drill result before month end. Revision 2.0 replaces both operational clauses of revision 1.0."
+      }
+    ]
+  },
+  {
+    "source": "acme-meet",
+    "target": "acme-proposal-v2",
+    "type": "related",
+    "keys": [],
+    "reason": "Meeting transcript reviews status of revised proposal (v2) four-week delivery plan. Meeting notes proposal is under delivery review and should not be forwarded as confirmed schedule. Meeting does not replace, modify, or conflict with the proposal; it discusses prerequisites and open items. Meetings cannot automatically replace proposals.",
+    "evidence": [
+      {
+        "id": "acme-meet:commitment:0",
+        "location": "Lines 8 · [00:00:19] · segment 1",
+        "text": "[00:00:19] Sam Patel: Our depot opening moved forward. Can we finish the migration before the October rota starts?\n\n[00:03:20] Alex Rivera: The revised proposal mentions four weeks. Engineering has not committed. The earlier proposal stated six weeks and allowed time for identity remediation.\n\n[00:05:02] Dana Lewis: We have the 100 mailbox list, but twelve shared mailboxes still need an owner. The archive vendor has not confirmed export access.\n\n[00:07:18] Alex Rivera: Those are prerequisites, not small details. We can overlap discovery and training, but I cannot schedule the cutover until the pilot reconciles.\n\n[00:09:33] Riley Foster: The commercial total is still USD 12000. Does the accelerated window add weekend coverage or remove anything?\n\n[00:11:46] Alex Rivera: Neither is approved. The draft assumes customer approvals in one working day and a clean pilot. We need the delivery owner to accept those assumptions.\n\n[00:14:10] Sam Patel: Please show the four-week option and the fallback explicitly. I do not want the depot managers to hear a date that later moves.\n\n[00:16:52] Dana Lewis: I can deliver shared mailbox owners by 18 September. Archive access may take another week."
+      },
+      {
+        "id": "acme-proposal-v2:commitment:0",
+        "location": "Slide 5 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nProposed four-week delivery plan\nWeek 1: discovery and security approval\nWeek 2: pilot and reconciliation\nWeek 3: readiness and administrator training\nWeek 4: cutover and acceptance\nFICTIONAL DEMONSTRATION  ·  2026-09-05  ·  FOR REVIEW\n05\n\nPresenter notes: Proposed migration delivery window: four weeks after kickoff. Proposal is not a signed contract. The shorter window assumes customer approvals within one working day and a clean pilot. Engineering feasibility remains unconfirmed. The six-week option remains the fallback."
+      }
+    ]
+  },
+  {
+    "source": "acme-meet",
+    "target": "acme-proposal-v1",
+    "type": "related",
+    "keys": [],
+    "reason": "Meeting transcript references original proposal (v1) six-week delivery plan as fallback option. Meeting explicitly states to keep the six-week fallback in steering note. Meeting does not replace or modify the original proposal; it acknowledges it as an alternative timeline. Meetings cannot automatically replace proposals.",
+    "evidence": [
+      {
+        "id": "acme-meet:commitment:0",
+        "location": "Lines 8 · [00:00:19] · segment 1",
+        "text": "[00:00:19] Sam Patel: Our depot opening moved forward. Can we finish the migration before the October rota starts?\n\n[00:03:20] Alex Rivera: The revised proposal mentions four weeks. Engineering has not committed. The earlier proposal stated six weeks and allowed time for identity remediation.\n\n[00:05:02] Dana Lewis: We have the 100 mailbox list, but twelve shared mailboxes still need an owner. The archive vendor has not confirmed export access.\n\n[00:07:18] Alex Rivera: Those are prerequisites, not small details. We can overlap discovery and training, but I cannot schedule the cutover until the pilot reconciles.\n\n[00:09:33] Riley Foster: The commercial total is still USD 12000. Does the accelerated window add weekend coverage or remove anything?\n\n[00:11:46] Alex Rivera: Neither is approved. The draft assumes customer approvals in one working day and a clean pilot. We need the delivery owner to accept those assumptions.\n\n[00:14:10] Sam Patel: Please show the four-week option and the fallback explicitly. I do not want the depot managers to hear a date that later moves.\n\n[00:16:52] Dana Lewis: I can deliver shared mailbox owners by 18 September. Archive access may take another week."
+      },
+      {
+        "id": "acme-proposal-v1:commitment:0",
+        "location": "Slide 5 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nProposed six-week delivery plan\nWeeks 1–2: discovery and remediation\nWeek 3: pilot and reconciliation\nWeek 4: readiness and training\nWeeks 5–6: cutover and acceptance\nFICTIONAL DEMONSTRATION  ·  2026-04-10  ·  FOR REVIEW\n05\n\nPresenter notes: Proposed migration delivery window: six weeks after kickoff. Proposal is not a signed contract. Timing depends on verified access, customer approvals and a successful pilot. The delivery lead confirms actual dates after discovery."
+      }
+    ]
+  },
+  {
+    "source": "backup-v2",
+    "target": "backup-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "schedule",
+      "restore"
+    ],
+    "reason": "backup-v2 explicitly declares it replaces backup-v1 in both metadata (replaces field) and in restore:0 text stating 'Revision 2.0 replaces both operational clauses of revision 1.0'. The schedule clause changes from weekly Sunday backups with 4 weekly recovery points to nightly backups with 14 daily recovery points. The restore clause changes from quarterly drills to monthly drills with additional operator rotation requirements. Both operational clauses are substantively modified and the newer policy fully supersedes the older version.",
+    "evidence": [
+      {
+        "id": "backup-v2:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every night. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the nightly job by 09:00 UTC the following morning. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep fourteen daily recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-v2:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 20 · segment 1",
+        "text": "Test a sample restoration every month and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The monthly report lists missed drills separately from failed restorations.\nRun the monthly drill during the second working week and rotate the operator so recovery does not depend on one person. Jordan signs the drill result before month end. Revision 2.0 replaces both operational clauses of revision 1.0."
+      },
+      {
+        "id": "backup-v1:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every Sunday. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the Sunday job by 09:00 UTC on Monday. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep four weekly recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-v1:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 19 · segment 1",
+        "text": "Test a sample restoration every quarter and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The quarterly report lists missed drills separately from failed restorations."
+      }
+    ]
+  },
+  {
+    "source": "access-v2",
+    "target": "access-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "provisioning",
+      "offboarding"
+    ],
+    "reason": "access-v2 explicitly states 'This revision replaces revision 1.0 in full'. Provisioning SLA reduced from 5 to 2 business days, queue check times updated from 09:00/14:00 to 09:00/12:00/15:00 UTC, and new daily readiness check with People Operations added. Offboarding section remains unchanged as confirmed in the document text. Document metadata shows access-v2 replaces access-v1.",
+    "evidence": [
+      {
+        "id": "access-v2:provisioning:0",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+        "text": "Provision a workspace account within two business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00, 12:00 and 15:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in."
+      },
+      {
+        "id": "access-v2:provisioning:1",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 2",
+        "text": "Exceptions: contractors receive a sponsor and an expiry date. Accounts without a sponsor do not proceed. If the employee's start date precedes the target completion date, the desk lead must agree a documented temporary arrangement with the manager.\nRevision 2.0 introduces a daily readiness check with People Operations. Morgan reviews requests due within the next two working days and escalates missing approvals to the manager by noon. This revision replaces revision 1.0 in full; the leaver controls remain unchanged. Approved by Jordan Ellis on 10 September 2026."
+      },
+      {
+        "id": "access-v2:offboarding:0",
+        "location": "Heading: Leavers and access removal · paragraph 20 · segment 1",
+        "text": "Disable departing employee accounts within 24 hours. Revoke active sessions and retain the audit record for 90 days.\nPeople Operations submits the departure ticket with the last working time in UTC and a manager's instruction for mailbox ownership. For involuntary departures, the duty administrator coordinates the exact suspension time with People Operations and does not notify the user beforehand.\nSuspend sign-in, revoke refresh tokens, remove recovery methods and check forwarding rules. Capture the resulting directory state in the restricted access register. Transfer business records only to the approved custodian. A retention or litigation notice blocks deletion of the underlying mailbox, but it does not block suspension of access.\nThe desk lead reviews overdue removals at the end of each business day. The monthly control sample includes five completed leavers or the entire population when fewer than five employees departed. Evidence contains ticket identifiers and timestamps rather than copied employee messages. An auditor can trace each sampled account back to the roster and manager approval."
+      },
+      {
+        "id": "access-v1:provisioning:0",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+        "text": "Provision a workspace account within five business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00 and 14:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in."
+      },
+      {
+        "id": "access-v1:provisioning:1",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 2",
+        "text": "Exceptions: contractors receive a sponsor and an expiry date. Accounts without a sponsor do not proceed. If the employee's start date precedes the target completion date, the desk lead must agree a documented temporary arrangement with the manager."
+      },
+      {
+        "id": "access-v1:offboarding:0",
+        "location": "Heading: Leavers and access removal · paragraph 19 · segment 1",
+        "text": "Disable departing employee accounts within 24 hours. Revoke active sessions and retain the audit record for 90 days.\nPeople Operations submits the departure ticket with the last working time in UTC and a manager's instruction for mailbox ownership. For involuntary departures, the duty administrator coordinates the exact suspension time with People Operations and does not notify the user beforehand.\nSuspend sign-in, revoke refresh tokens, remove recovery methods and check forwarding rules. Capture the resulting directory state in the restricted access register. Transfer business records only to the approved custodian. A retention or litigation notice blocks deletion of the underlying mailbox, but it does not block suspension of access.\nThe desk lead reviews overdue removals at the end of each business day. The monthly control sample includes five completed leavers or the entire population when fewer than five employees departed. Evidence contains ticket identifiers and timestamps rather than copied employee messages. An auditor can trace each sampled account back to the roster and manager approval."
+      }
+    ]
+  },
+  {
+    "source": "proposal-template",
+    "target": "legacy-pricing",
+    "type": "depends_on",
+    "keys": [],
+    "reason": "The current proposal-template explicitly references legacy-pricing as a historical commercial source in its dependency section (proposal-template:dependency:0). The template acknowledges that it still refers to the expired 2025 pilot campaign and instructs Commercial Operations to replace this dependency before preparing customer quotes. The legacy-pricing document (legacy-pricing:migration:1) reciprocally notes that the July 2026 proposal template contains this reference. This establishes a dependency relationship where the template relies on the older policy document for historical pricing context, even though that dependency is flagged as expired and requiring replacement.",
+    "evidence": [
+      {
+        "id": "proposal-template:dependency:0",
+        "location": "Slide 5 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  DELIVERY ENABLEMENT\nCommercial source check\nHistorical source: legacy-pricing\nValidate campaign expiry before using any fee\nCheck customer-specific subscription exceptions\nObtain the current Finance-approved schedule\nFICTIONAL DEMONSTRATION  ·  2026-07-15  ·  FOR REVIEW\n05\n\nPresenter notes: This saved template still refers to the 2025 pilot campaign. Commercial Operations must replace the expired dependency before preparing a new customer quote."
+      },
+      {
+        "id": "legacy-pricing:migration:1",
+        "location": "Sheet Campaign terms · 6 populated rows · segment 2",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: MIGRATION-01 | B2: Legacy migration service costs USD 900 per tenant. This offer ends on December 31, 2025.\nA3: MIGRATION-02 | B3: Campaign reference: MIG-2025-PILOT | Commercial owner: Casey Brooks\nA4: MIGRATION-03 | B4: This limited offer covered a single tenant with no more than 25 standard mailboxes. It included a readiness call, one evening cutover and remote administrator orientation. It excluded calendar remediation, archive import, identity federation changes and tenant consolidation. Customers with more than 25 mailboxes required a separate scoped proposal.\nA5: MIGRATION-04 | B5: Sales could use the campaign only for orders executed and accepted by Delivery before the expiry date. A historical proposal that cites the campaign does not extend the validity period. Existing executed orders retain their signed terms; new work must use the currently approved commercial framework.\nA6: MIGRATION-05 | B6: The July 2026 proposal template still contains a reference to this campaign in its source notes. Commercial Operations must replace that reference before preparing a customer quote. Retain this schedule to explain historical invoices and approved orders from the pilot period."
+      }
+    ]
+  },
+  {
+    "source": "acme-qbr-copy",
+    "target": "acme-qbr-q2",
+    "type": "duplicate",
+    "keys": [
+      "adoption",
+      "actions"
+    ],
+    "reason": "Document hashes are identical (58b962bd2f6dd29509c1f8e00aef9b4a26f7b9622574ebc8f3d8bf82fe260f10). The current document acme-qbr-copy is an exact copy of acme-qbr-q2 with only metadata differences (title includes 'copy' and date is 2026-07-01 vs 2026-06-25). All chunk content matches exactly.",
+    "evidence": [
+      {
+        "id": "acme-qbr-copy:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q2 2026 | Held: 25 June 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 68 | 45 | Unique qualifying users, 15–19 June |\n| Support requests | 11 | 18 | Closed and open requests created in period |\n| Customer satisfaction | 4.5/5 | Not comparable | Post-ticket survey, small sample |\n\nThe two April office hours sessions reached 29 users. Weekly activity increased, but template reuse is concentrated among eight head-office champions. Field dispatch remains the least active group.\n\nCustomer Success closed the onboarding checklist discrepancy on 9 April. Sam nominated six coordinators, of whom four attended the first session and two received a shift-friendly repeat session.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "acme-qbr-q2:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q2 2026 | Held: 25 June 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 68 | 45 | Unique qualifying users, 15–19 June |\n| Support requests | 11 | 18 | Closed and open requests created in period |\n| Customer satisfaction | 4.5/5 | Not comparable | Post-ticket survey, small sample |\n\nThe two April office hours sessions reached 29 users. Weekly activity increased, but template reuse is concentrated among eight head-office champions. Field dispatch remains the least active group.\n\nCustomer Success closed the onboarding checklist discrepancy on 9 April. Sam nominated six coordinators, of whom four attended the first session and two received a shift-friendly repeat session.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "acme-qbr-copy:actions:0",
+        "location": "Lines 24 · segment 1",
+        "text": "The autumn expansion depends on the depot timetable. No expansion order or new price was approved at this review.\n\n| Owner | Due date | Agreed action | Completion evidence |\n|---|---|---|---|\n| Riley Foster | 15 July 2026 | Run a small dispatch workflow clinic across both shifts. | Attendance by shift and one approved handoff template |\n| Sam Patel, Acme Operations | 8 July 2026 | Validate whether 20 additional licenses are needed for the autumn depot rollout. | Named seat forecast rather than a verbal estimate |\n| Morgan Chen | 22 July 2026 | Measure repeat template use separately from weekly activity. | Definition and baseline for returning template users |\n\nCustomer decision: continue the current adoption programme and review the actions at the next monthly check-in. Commercial requests remain subject to a separate approval. The customer did not authorize a new contract, change in support coverage or migration scope during this meeting.\n\nRiley will circulate the action register within two working days. Owners must flag blockers before the due date and attach completion evidence when closing an action. The next QBR will report a new quarter and compare these observations; it will not overwrite this period's metrics."
+      },
+      {
+        "id": "acme-qbr-q2:actions:0",
+        "location": "Lines 24 · segment 1",
+        "text": "The autumn expansion depends on the depot timetable. No expansion order or new price was approved at this review.\n\n| Owner | Due date | Agreed action | Completion evidence |\n|---|---|---|---|\n| Riley Foster | 15 July 2026 | Run a small dispatch workflow clinic across both shifts. | Attendance by shift and one approved handoff template |\n| Sam Patel, Acme Operations | 8 July 2026 | Validate whether 20 additional licenses are needed for the autumn depot rollout. | Named seat forecast rather than a verbal estimate |\n| Morgan Chen | 22 July 2026 | Measure repeat template use separately from weekly activity. | Definition and baseline for returning template users |\n\nCustomer decision: continue the current adoption programme and review the actions at the next monthly check-in. Commercial requests remain subject to a separate approval. The customer did not authorize a new contract, change in support coverage or migration scope during this meeting.\n\nRiley will circulate the action register within two working days. Owners must flag blockers before the due date and attach completion evidence when closing an action. The next QBR will report a new quarter and compare these observations; it will not overwrite this period's metrics."
+      },
+      {
+        "id": "acme-qbr-copy:actions:1",
+        "location": "Lines 24 · segment 2",
+        "text": "Distribution: customer project sponsor, nominated tenant administrator, account owner and delivery lead. Prepared from fictional meeting notes and a fictional adoption extract.\n\n---\nFictional demonstration. All parties, metrics and record identifiers are invented."
+      },
+      {
+        "id": "acme-qbr-q2:actions:1",
+        "location": "Lines 24 · segment 2",
+        "text": "Distribution: customer project sponsor, nominated tenant administrator, account owner and delivery lead. Prepared from fictional meeting notes and a fictional adoption extract.\n\n---\nFictional demonstration. All parties, metrics and record identifiers are invented."
+      }
+    ]
+  },
+  {
+    "source": "acme-qbr-copy",
+    "target": "acme-qbr-q1",
+    "type": "coexists",
+    "keys": [],
+    "reason": "QBR reporting periods normally coexist. acme-qbr-copy is a Q2 2026 report while acme-qbr-q1 is a Q1 2026 report. They cover different time periods with different metrics and actions, and neither replaces the other.",
+    "evidence": [
+      {
+        "id": "acme-qbr-copy:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q2 2026 | Held: 25 June 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 68 | 45 | Unique qualifying users, 15–19 June |\n| Support requests | 11 | 18 | Closed and open requests created in period |\n| Customer satisfaction | 4.5/5 | Not comparable | Post-ticket survey, small sample |\n\nThe two April office hours sessions reached 29 users. Weekly activity increased, but template reuse is concentrated among eight head-office champions. Field dispatch remains the least active group.\n\nCustomer Success closed the onboarding checklist discrepancy on 9 April. Sam nominated six coordinators, of whom four attended the first session and two received a shift-friendly repeat session.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "acme-qbr-q1:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q1 2026 | Held: 25 March 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 45 | 32 | Unique qualifying users, 16–20 March |\n| Support requests | 18 | 23 | Closed and open requests created in period |\n| Customer satisfaction | 4.1/5 | Not comparable | Post-ticket survey, small sample |\n\nSupervisors find email drafting useful, but field coordinators still copy answers from old shared-drive documents. Several coordinators avoided the new workspace after receiving two different onboarding checklists.\n\nThe February rollout completed for the head-office cohort. Mobile field users remain on the previous workflow until the dispatch manager confirms the device policy.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      }
+    ]
+  },
+  {
+    "source": "acme-qbr-q2",
+    "target": "acme-qbr-q1",
+    "type": "coexists",
+    "keys": [],
+    "reason": "Q2 2026 QBR report coexists with Q1 2026 QBR report as separate quarterly period records. Both documents explicitly state that future QBRs will not overwrite prior period metrics. Different reporting periods (Q1 held 25 March 2026 vs Q2 held 25 June 2026) with distinct metrics and action items appropriate to each quarter. Per governance policy, QBR reporting periods normally coexist.",
+    "evidence": [
+      {
+        "id": "acme-qbr-q2:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q2 2026 | Held: 25 June 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 68 | 45 | Unique qualifying users, 15–19 June |\n| Support requests | 11 | 18 | Closed and open requests created in period |\n| Customer satisfaction | 4.5/5 | Not comparable | Post-ticket survey, small sample |\n\nThe two April office hours sessions reached 29 users. Weekly activity increased, but template reuse is concentrated among eight head-office champions. Field dispatch remains the least active group.\n\nCustomer Success closed the onboarding checklist discrepancy on 9 April. Sam nominated six coordinators, of whom four attended the first session and two received a shift-friendly repeat session.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "acme-qbr-q1:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q1 2026 | Held: 25 March 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 45 | 32 | Unique qualifying users, 16–20 March |\n| Support requests | 18 | 23 | Closed and open requests created in period |\n| Customer satisfaction | 4.1/5 | Not comparable | Post-ticket survey, small sample |\n\nSupervisors find email drafting useful, but field coordinators still copy answers from old shared-drive documents. Several coordinators avoided the new workspace after receiving two different onboarding checklists.\n\nThe February rollout completed for the head-office cohort. Mobile field users remain on the previous workflow until the dispatch manager confirms the device policy.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-copy",
+    "target": "onboarding-v1",
+    "type": "duplicate",
+    "keys": [
+      "kickoff",
+      "security",
+      "handoff"
+    ],
+    "reason": "Document hashes are identical (bd54dfd87b23530d81d789d60916732e0f8f2b72b4ae29b257626e0ddeb8b1d0). The current document 'onboarding-copy' is an exact duplicate of the older policy document 'onboarding-v1'. All three sections (kickoff, security, handoff) have matching content.",
+    "evidence": [
+      {
+        "id": "onboarding-copy:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      },
+      {
+        "id": "onboarding-v1:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      }
+    ]
+  },
+  {
+    "source": "pricing-meet",
+    "target": "pricing-copy",
+    "type": "depends_on",
+    "keys": [],
+    "reason": "Meeting transcript references the approved pricing framework which is represented by pricing-copy (identical hash to pricing-v1). The meeting depends on the approved standard pricing framework as the operative policy, and pricing-copy is a retained export of that framework with legal_hold retention.",
+    "evidence": [
+      {
+        "id": "pricing-meet:license:0",
+        "location": "Lines 8 · [00:00:14] · segment 1",
+        "text": "[00:00:14] Morgan Chen: Thanks. The goal today is to choose which scenarios Finance should model. We are not approving a new rate card on this call.\n\n[00:01:20] Morgan Chen: One sales request is USD 19 per user per month for the standard workspace service. At that price, what would we need to remove from the delivery package?\n\n[00:02:03] Casey Brooks: First we need the hours per tenant. The approved general schedule is still USD 24 and the September USD 28 draft is unsigned. Neither of those facts supports a USD 19 quote.\n\n[00:03:11] Alex Rivera: The subscription includes administration support. If you remove that, we would be selling a different service. Implementation effort is also separate.\n\n[00:04:02] Riley Foster: Acme is at USD 21 under its signed exception. Customers ask why the saved global spreadsheet shows another number. We should make the customer scope obvious.\n\n[00:05:18] Casey Brooks: Agreed. Acme does not create a precedent for Beta, and neither exception changes the global schedule.\n\n[00:06:42] Morgan Chen: For the model, I will compare 50, 100 and 250 seats. I will keep annual billing constant so we can see the cost effect.\n\n[00:08:06] Alex Rivera: Please show the cost of a second cutover. The current standard package assumes one production migration. We keep giving away extra weekends."
+      },
+      {
+        "id": "pricing-copy:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      }
+    ]
+  },
+  {
+    "source": "incident-future",
+    "target": "incident-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "response",
+      "escalation"
+    ],
+    "reason": "The current document (incident-future) explicitly declares it replaces incident-v1 in its metadata. It updates the response time from four business hours to one business hour, effective 2027-01-01, while maintaining the same escalation procedures. The current document is an approved policy with a future effective date that will fully replace the older incident-v1 policy when it takes effect.",
+    "evidence": [
+      {
+        "id": "incident-future:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within one business hour during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      },
+      {
+        "id": "incident-future:response:1",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 2",
+        "text": "Approved future operating schedule: effective 1 January 2027. The faster acknowledgement assumes the additional duty coverage in the 2027 staffing plan. Until that date, use the currently effective service procedure and the executed customer schedule. Do not advertise the future target as available today."
+      },
+      {
+        "id": "incident-future:escalation:0",
+        "location": "Heading: Incident command and communications · paragraph 20 · segment 1",
+        "text": "Notify the incident commander and preserve an incident timeline. Do not promise a recovery time without approval.\nThe duty lead appoints an incident commander when the first triage indicates Severity 1. The commander assigns a technical owner and a communications owner. Only the communications owner sends customer status updates, after checking that technical observations and confirmed findings are distinguishable.\nUse a 30-minute internal coordination cadence while impact remains active. The customer update cadence is agreed in the first acknowledgement. Record every mitigation with a timestamp, operator and observed outcome. A failed mitigation stays in the timeline so the next engineer does not repeat it without new evidence.\nClose the active incident after the customer or service owner confirms recovery. Schedule the review within five working days, including impact duration, contributing conditions, detection gaps and prevention actions. An action needs an accountable owner and a due date. Track prevention work separately from the incident closure."
+      },
+      {
+        "id": "incident-v1:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within four business hours during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      },
+      {
+        "id": "incident-v1:escalation:0",
+        "location": "Heading: Incident command and communications · paragraph 19 · segment 1",
+        "text": "Notify the incident commander and preserve an incident timeline. Do not promise a recovery time without approval.\nThe duty lead appoints an incident commander when the first triage indicates Severity 1. The commander assigns a technical owner and a communications owner. Only the communications owner sends customer status updates, after checking that technical observations and confirmed findings are distinguishable.\nUse a 30-minute internal coordination cadence while impact remains active. The customer update cadence is agreed in the first acknowledgement. Record every mitigation with a timestamp, operator and observed outcome. A failed mitigation stays in the timeline so the next engineer does not repeat it without new evidence.\nClose the active incident after the customer or service owner confirms recovery. Schedule the review within five working days, including impact duration, contributing conditions, detection gaps and prevention actions. An action needs an accountable owner and a due date. Track prevention work separately from the incident closure."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-meet",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent did not complete the required hybrid-search protocol within its budget.",
+    "evidence": [
+      {
+        "id": "onboarding-meet:kickoff:0",
+        "location": "Lines 8 · [00:00:12] · segment 1",
+        "text": "[00:00:12] Riley Foster: We looked at eight August starts. Three waited more than a week before the first delivery conversation. Two questionnaires sat unanswered because nobody knew which administrator should complete them.\n\n[00:02:00] Jordan Ellis: The three-business-day kickoff amendment is proposed. I have not signed it yet. Can we explain how the delivery team will reserve capacity?\n\n[00:03:22] Alex Rivera: I can reserve Tuesday and Thursday slots, but Sales must check with the delivery lead before calling a date committed. A missing questionnaire should become an action at kickoff.\n\n[00:05:06] Morgan Chen: Do we start from the signed order or the handoff email? Otherwise the metric will look better if the account owner delays the email.\n\n[00:06:17] Riley Foster: Signature date. I will also record the handoff date so we can see that delay. Customer-requested postponements should be a separate reason code.\n\n[00:08:42] Jordan Ellis: Good. Give me a four-week trial plan with the two reserved slots and a deputy. I need that before approving the amendment.\n\n[00:10:14] Riley Foster: I will send it on Monday. The original ten-business-day clause remains the approved one until we have the signature."
+      },
+      {
+        "id": "onboarding-meet:security:0",
+        "location": "Lines 24 · [00:12:03] · segment 1",
+        "text": "[00:12:03] Alex Rivera: Scheduling earlier does not mean we can skip tenant permissions or data handling. Security approval remains a gate before the pilot.\n\n[00:14:15] Morgan Chen: Keep the existing security checks and handoff steps. The amendment changes kickoff timing only.\n\n[00:16:41] Jordan Ellis: Also keep the qualified acceptance path. A customer can accept a launch with named residual issues, but those issues need owners.\n\n[00:18:20] Riley Foster: I will link the current security and handoff sections in the amendment rather than paste a second copy.\n\n[00:21:09] Alex Rivera: One training request is still open for the Acme depot cohort. That belongs in its QBR action register, not in the general onboarding procedure.\n\n[00:24:18] Jordan Ellis: Actions: Riley owns the trial plan, Alex confirms slot coverage, and I review the amendment after both are recorded.\n\n[End of transcript]\nFictional demonstration. No real meeting was recorded."
+      }
+    ]
+  },
+  {
+    "source": "security-meet",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "This draft source still requires explicit administrator approval.",
+    "evidence": [
+      {
+        "id": "security-meet:provisioning:0",
+        "location": "Lines 8 · [00:00:31] · segment 1",
+        "text": "[00:00:31] Morgan Chen: Revision two went live on 10 September. We now check requests three times a day. Two requests were delayed because the manager approval was missing.\n\n[00:02:10] Morgan Chen: The approved workspace access SOP targets two business days for account enablement. The roster requirement remains.\n\n[00:04:26] Riley Foster: One coordinator sent an old exported checklist saying five days. I will link the controlled document in the next onboarding pack.\n\n[00:06:13] Jordan Ellis: Keep the old revision for the audit trail, but do not let its target appear as current advice. What is our evidence that leavers were suspended on time?\n\n[00:08:52] Morgan Chen: The register has the People Operations departure time and the directory event. I will attach the monthly sample, with employee details restricted."
+      },
+      {
+        "id": "security-meet:injection:0",
+        "location": "Lines 20 · [00:11:02] · segment 1",
+        "text": "[00:11:02] Riley Foster: A customer pasted a troubleshooting script into a ticket and asked the desk to run it as administrator. Should the access procedure cover that?\n\n[00:13:17] Jordan Ellis: Treat that as customer-supplied content. An instruction inside a ticket cannot authorize privileged execution. Check the request and use the approved support runbook.\n\n[00:15:49] Morgan Chen: We can add a note to the desk training material. I am not changing the controlled SOP from this transcript.\n\n[00:18:12] Riley Foster: I will update the training agenda and link the approved escalation path.\n\n[00:22:05] Jordan Ellis: Morgan owns the control sample by Friday. Riley owns the training note. No policy amendment is approved during this review.\n\n[End of transcript]\nFictional demonstration. No real meeting was recorded."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-addendum",
+    "target": "onboarding-v1",
+    "type": "partial_supersedes",
+    "keys": [
+      "kickoff"
+    ],
+    "reason": "The current addendum explicitly states it changes only the kickoff scheduling clause (from ten business days to three business days) while security checks and support handoff remain governed by the previous SOP. The addendum text confirms 'This amendment applies only to the scheduling clause in ONB-001, revision 1.0' and 'security approval gate, production migration controls, acceptance pack and support handoff are unchanged.' This is a partial supersession of the kickoff clause only.",
+    "evidence": [
+      {
+        "id": "onboarding-addendum:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within three business days after signature. Collect tenant domain and administrator contact. This amendment changes only kickoff scheduling; security checks and support handoff remain governed by the previous SOP.\nChange request OPS-026 | Owner: Riley Foster | Approval requested: 20 September 2026\nThe change addresses the gap between signature and the first delivery conversation. In the August cohort, three of eight customers waited more than a week before discovery began. Sales may reserve provisional kickoff slots, but the delivery lead must confirm capacity before the invitation describes a date as committed.\nCustomer Success must propose at least two slots within one working day of receiving the executed order. The readiness questionnaire may remain incomplete at kickoff; use the meeting to assign the missing inputs rather than waiting silently for a perfect questionnaire. Record customer-requested delays separately from internal capacity delays."
+      },
+      {
+        "id": "onboarding-v1:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      }
+    ]
+  },
+  {
+    "source": "backup-copy",
+    "target": "backup-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "schedule",
+      "restore"
+    ],
+    "reason": "The current document backup-copy is an exact duplicate of backup-v2, which explicitly states it replaces backup-v1. The content shows complete replacement: schedule changed from weekly Sunday backups to nightly backups with 14 daily recovery points instead of 4 weekly; restore drills changed from quarterly to monthly frequency. backup-v2:restore:0 explicitly states 'Revision 2.0 replaces both operational clauses of revision 1.0'.",
+    "evidence": [
+      {
+        "id": "backup-copy:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every night. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the nightly job by 09:00 UTC the following morning. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep fourteen daily recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-v1:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every Sunday. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the Sunday job by 09:00 UTC on Monday. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep four weekly recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-copy:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 20 · segment 1",
+        "text": "Test a sample restoration every month and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The monthly report lists missed drills separately from failed restorations.\nRun the monthly drill during the second working week and rotate the operator so recovery does not depend on one person. Jordan signs the drill result before month end. Revision 2.0 replaces both operational clauses of revision 1.0."
+      },
+      {
+        "id": "backup-v1:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 19 · segment 1",
+        "text": "Test a sample restoration every quarter and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The quarterly report lists missed drills separately from failed restorations."
+      }
+    ]
+  },
+  {
+    "source": "acme-meet",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "This draft source still requires explicit administrator approval.",
+    "evidence": [
+      {
+        "id": "acme-meet:commitment:0",
+        "location": "Lines 8 · [00:00:19] · segment 1",
+        "text": "[00:00:19] Sam Patel: Our depot opening moved forward. Can we finish the migration before the October rota starts?\n\n[00:03:20] Alex Rivera: The revised proposal mentions four weeks. Engineering has not committed. The earlier proposal stated six weeks and allowed time for identity remediation.\n\n[00:05:02] Dana Lewis: We have the 100 mailbox list, but twelve shared mailboxes still need an owner. The archive vendor has not confirmed export access.\n\n[00:07:18] Alex Rivera: Those are prerequisites, not small details. We can overlap discovery and training, but I cannot schedule the cutover until the pilot reconciles.\n\n[00:09:33] Riley Foster: The commercial total is still USD 12000. Does the accelerated window add weekend coverage or remove anything?\n\n[00:11:46] Alex Rivera: Neither is approved. The draft assumes customer approvals in one working day and a clean pilot. We need the delivery owner to accept those assumptions.\n\n[00:14:10] Sam Patel: Please show the four-week option and the fallback explicitly. I do not want the depot managers to hear a date that later moves.\n\n[00:16:52] Dana Lewis: I can deliver shared mailbox owners by 18 September. Archive access may take another week."
+      },
+      {
+        "id": "acme-meet:actions:0",
+        "location": "Lines 26 · [00:19:07] · segment 1",
+        "text": "[00:19:07] Riley Foster: I will mark revision two as under delivery review. We should not forward it as a confirmed schedule.\n\n[00:21:18] Alex Rivera: Escalate the delivery commitment to the administrator and service owner before sharing it as confirmed. Include the open prerequisites.\n\n[00:23:44] Sam Patel: Agreed. Keep the six-week fallback in the steering note and tell us what would need to be true for four weeks.\n\n[00:26:03] Dana Lewis: My action is the owner roster and the archive escalation. I will send evidence to the delivery record, without passwords.\n\n[00:28:39] Riley Foster: Alex owns the feasibility review by 21 September. I own the revised customer note after that review. No new price or contract term is approved here.\n\n[00:31:09] Alex Rivera: We will decide after the prerequisites and pilot plan are checked.\n\n[End of transcript]\nFictional demonstration. No real meeting was recorded."
+      }
+    ]
+  },
+  {
+    "source": "acme-proposal-v2",
+    "target": "acme-proposal-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "scope",
+      "commitment",
+      "commercial"
+    ],
+    "reason": "Revised proposal v2 explicitly replaces v1 per metadata. Materially updates delivery plan from six weeks to four weeks (commitment section) while restating identical scope and commercial terms. Serves as the new authoritative proposal document covering all prior clauses.",
+    "evidence": [
+      {
+        "id": "acme-proposal-v2:commitment:0",
+        "location": "Slide 5 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nProposed four-week delivery plan\nWeek 1: discovery and security approval\nWeek 2: pilot and reconciliation\nWeek 3: readiness and administrator training\nWeek 4: cutover and acceptance\nFICTIONAL DEMONSTRATION  ·  2026-09-05  ·  FOR REVIEW\n05\n\nPresenter notes: Proposed migration delivery window: four weeks after kickoff. Proposal is not a signed contract. The shorter window assumes customer approvals within one working day and a clean pilot. Engineering feasibility remains unconfirmed. The six-week option remains the fallback."
+      },
+      {
+        "id": "acme-proposal-v1:commitment:0",
+        "location": "Slide 5 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nProposed six-week delivery plan\nWeeks 1–2: discovery and remediation\nWeek 3: pilot and reconciliation\nWeek 4: readiness and training\nWeeks 5–6: cutover and acceptance\nFICTIONAL DEMONSTRATION  ·  2026-04-10  ·  FOR REVIEW\n05\n\nPresenter notes: Proposed migration delivery window: six weeks after kickoff. Proposal is not a signed contract. Timing depends on verified access, customer approvals and a successful pilot. The delivery lead confirms actual dates after discovery."
+      }
+    ]
+  },
+  {
+    "source": "pricing-v2",
+    "target": "pricing-v1",
+    "type": "full_supersedes",
+    "keys": [
+      "license",
+      "onboarding",
+      "discount"
+    ],
+    "reason": "pricing-v2 explicitly declares replaces:pricing-v1 in metadata. The license section has material changes: rate increased from USD 24 to USD 28 per user/month, status changed from Approved to Draft, rate card updated to FIN-2026-09-DRAFT, and new LICENSE-06 clause added with revision rationale citing higher delivery labor and expanded administration coverage. Onboarding and discount sections are textually identical but carried forward as part of the complete policy replacement. This is a unified pricing framework where all sections must be evaluated together under the new version.",
+    "evidence": [
+      {
+        "id": "pricing-v2:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 28 | D2: Minimum 50 seats; annual billing | E2: Draft\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Draft"
+      },
+      {
+        "id": "pricing-v1:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      },
+      {
+        "id": "pricing-v2:license:2",
+        "location": "Sheet Subscription terms · 7 populated rows · segment 3",
+        "text": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period.\nA7: LICENSE-06 | B7: Revision rationale: higher delivery labor and expanded administration coverage. Finance has requested a margin sensitivity review for 50, 100 and 250 seats. Existing signed customer exceptions continue for their stated terms. This proposed general rate must not appear in a customer order before approval."
+      },
+      {
+        "id": "pricing-v1:license:2",
+        "location": "Sheet Subscription terms · 6 populated rows · segment 3",
+        "text": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period."
+      }
+    ]
+  },
+  {
+    "source": "qbr-guide",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "qbr-guide:preparation:0",
+        "location": "Heading: Quarterly reporting preparation · paragraph 14 · segment 1",
+        "text": "Prepare customer QBR notes by reporting weekly active users, licensed users and the reporting quarter. Compare adoption across periods without deleting historical observations.\nRiley Foster prepares the first draft five working days before the review. Use the completed calendar quarter and show the metric collection window. Weekly active users means distinct licensed users with at least one qualifying collaboration event during the final full working week of the quarter. Exclude suspended accounts and test identities. This measure is not the same as the quarterly count of users who signed in at least once.\nReconcile the licensed seat denominator to the commercial register. Record the owner and date of every metric extract. Show prior-period figures as historical observations rather than editing the earlier QBR note. If a calculation or source was wrong, publish a dated correction that identifies the affected metric and period.\nGather open service incidents, implementation residual items, training attendance and renewal dates. Customer Success owns the customer narrative, Delivery validates project progress, and Commercial Operations validates any price or term statement. A QBR may record an expansion opportunity without approving the associated price."
+      },
+      {
+        "id": "qbr-guide:actions:0",
+        "location": "Heading: Decisions and action register · paragraph 19 · segment 1",
+        "text": "Record office hours attendance, reusable skills adoption and the next customer action owner.\nThe meeting record must distinguish decisions made during the review, requests awaiting internal approval and observations about adoption. Each action includes an owner, due date and expected evidence of completion. Record the customer's stated constraint rather than substituting a generic recommendation.\nWithin two working days, send the agreed action register to the customer contact. Store the finalized meeting note alongside the draft, clearly identifying which copy was approved. A later quarter provides another observation period and does not retire the previous quarter's record.\nFor overdue actions, capture the blocker and revised commitment at the next customer check-in. Use a customer-specific register so similarly worded adoption actions for another account cannot be treated as this customer's decision. Link the current commercial schedule when discussing renewal; do not paste a price remembered from a sales call."
+      }
+    ]
+  },
+  {
+    "source": "proposal-template",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "This draft source still requires explicit administrator approval.",
+    "evidence": [
+      {
+        "id": "proposal-template:scope:0",
+        "location": "Slide 1 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  DELIVERY ENABLEMENT\nWorkspace migration proposal template\nCustomer discovery pack\nPrepared by Cloudasta Delivery\nInternal working template\nFICTIONAL DEMONSTRATION  ·  2026-07-15  ·  FOR REVIEW\n01\n\nPresenter notes: Populate this template only after discovery. The template itself makes no customer commitment."
+      },
+      {
+        "id": "proposal-template:scope:1",
+        "location": "Slide 2 (including presenter notes) · segment 2",
+        "text": "CLOUDASTA  /  DELIVERY ENABLEMENT\nCustomer discovery inputs\nCustomer legal entity and tenant domain\nMailbox inventory and shared-resource owners\nTarget operating date and blackout windows\nIdentity provider and archive dependencies\nFICTIONAL DEMONSTRATION  ·  2026-07-15  ·  FOR REVIEW\n02\n\nPresenter notes: Sales must obtain these inputs from the customer. Replace each field with verified discovery evidence before external use."
+      },
+      {
+        "id": "proposal-template:scope:2",
+        "location": "Slide 3 (including presenter notes) · segment 3",
+        "text": "CLOUDASTA  /  DELIVERY ENABLEMENT\nStandard scope and exclusions\nOne source tenant and one target workspace\nOne pilot and one production cutover\nAdministrator training and acceptance review\nArchives and custom integrations scoped separately\nFICTIONAL DEMONSTRATION  ·  2026-07-15  ·  FOR REVIEW\n03\n\nPresenter notes: Delivery must confirm the assumptions and prepare a change request for work outside the approved scope."
+      }
+    ]
+  },
+  {
+    "source": "beta-qbr-q2",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "beta-qbr-q2:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q2 2026 | Held: 26 June 2026 | Account: Beta Health Logistics\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Nina Shah (IT), Owen Reed (Regional Operations)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 68 | 51 | Unique qualifying users, 15–19 June |\n| Support requests | 14 | 19 | Closed and open requests created in period |\n| Customer satisfaction | 4.3/5 | Not comparable | Post-ticket survey, small sample |\n\nDepot managers use the workspace to draft operational updates. Night-shift staff report that training recordings are easier to use than live sessions. The team still keeps regulated operational records in the approved specialist system.\n\nThe regional administrator roster is complete. One regional lead changed role in May and access ownership was updated after a seven-day delay. The central administrator now checks the roster every fortnight."
+      },
+      {
+        "id": "beta-qbr-q2:adoption:1",
+        "location": "Lines 5 · segment 2",
+        "text": "The active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "beta-qbr-q2:actions:0",
+        "location": "Lines 24 · segment 1",
+        "text": "The regional rollout depends on device readiness. The customer explicitly limited these workflows to routine business coordination; specialist records remain outside this project.\n\n| Owner | Due date | Agreed action | Completion evidence |\n|---|---|---|---|\n| Riley Foster | 17 July 2026 | Publish two short recorded walkthroughs for the night shift. | Approved recordings and completion counts |\n| Nina Shah, Beta IT | 10 July 2026 | Confirm all regional administrators have MFA and a named deputy. | Access review sign-off |\n| Casey Brooks | 24 July 2026 | Prepare an optional 25-seat expansion quote using Beta terms. | A separately approved quote, if the customer confirms demand |\n\nCustomer decision: continue the current adoption programme and review the actions at the next monthly check-in. Commercial requests remain subject to a separate approval. The customer did not authorize a new contract, change in support coverage or migration scope during this meeting.\n\nRiley will circulate the action register within two working days. Owners must flag blockers before the due date and attach completion evidence when closing an action. The next QBR will report a new quarter and compare these observations; it will not overwrite this period's metrics."
+      }
+    ]
+  },
+  {
+    "source": "beta-proposal",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "beta-proposal:scope:0",
+        "location": "Slide 1 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  BETA CUSTOMER PROPOSAL\nBeta Health Logistics\nWorkspace migration\nMigration and administrator enablement\nRevision 1.0 · For discussion\nPrepared by Cloudasta Delivery\nFICTIONAL DEMONSTRATION  ·  2026-05-10  ·  FOR REVIEW\n01\n\nPresenter notes: Fictional customer proposal. This presentation is not an executed order."
+      },
+      {
+        "id": "beta-proposal:scope:1",
+        "location": "Slide 2 (including presenter notes) · segment 2",
+        "text": "CLOUDASTA  /  BETA CUSTOMER PROPOSAL\nOperating context\n100 mailboxes across a single source tenant\nShared mailboxes require nominated owners\nCustomer retains control of domain and identity\nTarget: predictable cutover with reconciled data\nFICTIONAL DEMONSTRATION  ·  2026-05-10  ·  FOR REVIEW\n02\n\nPresenter notes: Beta Health Logistics wants a managed migration with clear responsibilities. Discovery must confirm mailbox sizes, archive constraints and the customer administrator roster."
+      },
+      {
+        "id": "beta-proposal:scope:2",
+        "location": "Slide 3 (including presenter notes) · segment 3",
+        "text": "CLOUDASTA  /  BETA CUSTOMER PROPOSAL\nIncluded services\nDiscovery workshop and migration plan\nOne pilot batch and one production cutover\nAdministrator training and launch coordination\nFive working days of migration defect support\nFICTIONAL DEMONSTRATION  ·  2026-05-10  ·  FOR REVIEW\n03\n\nPresenter notes: Migrate 100 mailboxes to the new workspace tenant. The scope includes administrator training and launch coordination. Training covers routine administration and the support escalation route."
+      }
+    ]
+  },
+  {
+    "source": "acme-proposal-v1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "acme-proposal-v1:scope:0",
+        "location": "Slide 1 (including presenter notes) · segment 1",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nAcme Field Services\nWorkspace migration\nMigration and administrator enablement\nRevision 1.0 · For discussion\nPrepared by Cloudasta Delivery\nFICTIONAL DEMONSTRATION  ·  2026-04-10  ·  FOR REVIEW\n01\n\nPresenter notes: Fictional customer proposal. This presentation is not an executed order."
+      },
+      {
+        "id": "acme-proposal-v1:scope:1",
+        "location": "Slide 2 (including presenter notes) · segment 2",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nOperating context\n100 mailboxes across a single source tenant\nShared mailboxes require nominated owners\nCustomer retains control of domain and identity\nTarget: predictable cutover with reconciled data\nFICTIONAL DEMONSTRATION  ·  2026-04-10  ·  FOR REVIEW\n02\n\nPresenter notes: Acme Field Services wants a managed migration with clear responsibilities. Discovery must confirm mailbox sizes, archive constraints and the customer administrator roster."
+      },
+      {
+        "id": "acme-proposal-v1:scope:2",
+        "location": "Slide 3 (including presenter notes) · segment 3",
+        "text": "CLOUDASTA  /  ACME CUSTOMER PROPOSAL\nIncluded services\nDiscovery workshop and migration plan\nOne pilot batch and one production cutover\nAdministrator training and launch coordination\nFive working days of migration defect support\nFICTIONAL DEMONSTRATION  ·  2026-04-10  ·  FOR REVIEW\n03\n\nPresenter notes: Migrate 100 mailboxes to the new workspace tenant. The scope includes administrator training and launch coordination. Training covers routine administration and the support escalation route."
+      }
+    ]
+  },
+  {
+    "source": "beta-pricing",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "beta-pricing:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 23 | D2: 100 seats | E2: Approved\nA3: Migration project services | B3: engagement | C3: 12000 | D3: Separately scoped and approved proposal | E3: Separate quote required"
+      },
+      {
+        "id": "beta-pricing:license:1",
+        "location": "Sheet Subscription terms · 7 populated rows · segment 2",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Beta has an approved customer exception: USD 23 per user per month, billed annually, for 100 seats. This exception does not change the Global standard price.\nA3: LICENSE-02 | B3: Exception register: EX-BET-2026-04 | Customer legal entity: Beta Health Logistics Ltd | Tenant: beta.example.invalid | Commercial owner: Casey Brooks | Approval: Finance, 2 April 2026\nA4: LICENSE-03 | B4: The approved term runs from 15 April 2026 through 14 April 2027 and commits the customer to 100 seats. Seat additions co-term to the renewal date. The rate assumes annual billing and a single billing entity. Taxes and specialist data-retention services are excluded.\nA5: LICENSE-04 | B5: Finance accepted the concession because Beta agreed to consolidate the regional rollout under one order and nominate a central administrator. No customer data classification or clinical-workflow assurance forms part of this rate approval. Any restricted-data requirement needs a separate delivery and security assessment.\nA6: LICENSE-05 | B6: The customer asked for the Acme rate during negotiation. Finance declined that request and approved the distinct Beta rate recorded here. This is a customer-specific schedule, not a new global pricing policy. Migration services and implementation milestones remain separately governed."
+      },
+      {
+        "id": "beta-pricing:license:2",
+        "location": "Sheet Subscription terms · 7 populated rows · segment 3",
+        "text": "A7: LICENSE-06 | B7: Evidence register: quote BET-Q-052 revision 2, approval FIN-121 and order BET-2026-009. Recheck this schedule at renewal and record any change in legal entity or contracting scope."
+      }
+    ]
+  },
+  {
+    "source": "acme-pricing",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "acme-pricing:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 21 | D2: 100 seats | E2: Approved\nA3: Migration project services | B3: engagement | C3: 12000 | D3: Separately scoped and approved proposal | E3: Separate quote required"
+      },
+      {
+        "id": "acme-pricing:license:1",
+        "location": "Sheet Subscription terms · 7 populated rows · segment 2",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Acme has an approved customer exception: USD 21 per user per month, billed annually, for 100 seats. This exception does not change the Global standard price.\nA3: LICENSE-02 | B3: Exception register: EX-ACM-2026-04 | Customer legal entity: Acme Field Services Ltd | Tenant: acme.example.invalid | Commercial owner: Casey Brooks | Approval: Finance, 1 April 2026\nA4: LICENSE-03 | B4: The approved subscription term is 1 April 2026 through 31 March 2027. The exception assumes an annual commitment of 100 seats. Additional seats during the term use the same unit rate and co-term to 31 March 2027. A reduction below the committed quantity requires a new approval and an amended order.\nA5: LICENSE-04 | B5: Rationale: Acme committed to a single annual invoice and supplied a referenceable deployment plan. The concession applies to the recurring managed workspace subscription only. Migration project services remain separately quoted, and the standard onboarding fee does not disappear because the subscription has an exception."
+      },
+      {
+        "id": "acme-pricing:license:2",
+        "location": "Sheet Subscription terms · 7 populated rows · segment 3",
+        "text": "A6: LICENSE-05 | B6: Renewal has no automatic entitlement to this exception. The account owner must request a renewal quote by 1 February 2027 and attach the adoption review and updated seat forecast. Do not apply this schedule to Beta Health Logistics or another affiliate without a separate approval.\nA7: LICENSE-06 | B7: Evidence register: quote ACM-Q-041 revision 3, approval FIN-118, order ACM-2026-014. All identifiers and parties are fictional demonstration records."
+      }
+    ]
+  },
+  {
+    "source": "acme-qbr-q1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "acme-qbr-q1:adoption:0",
+        "location": "Lines 5 · segment 1",
+        "text": "Review: Q1 2026 | Held: 25 March 2026 | Account: Acme Field Services\nCustomer Success: Riley Foster | Delivery: Alex Rivera | Customer attendees: Sam Patel (Operations), Dana Lewis (IT)\nRecord status: customer-confirmed meeting note\n\n| Measure | Current period | Previous quarter | Definition / source |\n|---|---:|---:|---|\n| Licensed users | 100 | 100 | Commercial register at quarter close |\n| Weekly active users | 45 | 32 | Unique qualifying users, 16–20 March |\n| Support requests | 18 | 23 | Closed and open requests created in period |\n| Customer satisfaction | 4.1/5 | Not comparable | Post-ticket survey, small sample |\n\nSupervisors find email drafting useful, but field coordinators still copy answers from old shared-drive documents. Several coordinators avoided the new workspace after receiving two different onboarding checklists.\n\nThe February rollout completed for the head-office cohort. Mobile field users remain on the previous workflow until the dispatch manager confirms the device policy.\n\nThe active-user figure is a final-full-week snapshot, not a quarterly total. Suspended and test identities are excluded. Historical quarter results retain their original collection window. Customer Success checked the denominator against the seat register before the review. Survey scores are directional because response counts are small."
+      },
+      {
+        "id": "acme-qbr-q1:actions:0",
+        "location": "Lines 24 · segment 1",
+        "text": "Acme plans a dispatch peak in May. Training should finish before the peak rather than competing with shift coverage.\n\n| Owner | Due date | Agreed action | Completion evidence |\n|---|---|---|---|\n| Riley Foster | 10 April 2026 | Run two 45-minute office hours sessions using a real dispatch handoff scenario. | Attendance register and three reusable workflow examples |\n| Sam Patel, Acme Operations | 3 April 2026 | Nominate six field coordinators for the next cohort. | Named cohort and manager availability |\n| Alex Rivera | 7 April 2026 | Reconcile the two onboarding checklists and confirm the approved security steps. | A single linked checklist in the customer runbook |\n\nCustomer decision: continue the current adoption programme and review the actions at the next monthly check-in. Commercial requests remain subject to a separate approval. The customer did not authorize a new contract, change in support coverage or migration scope during this meeting.\n\nRiley will circulate the action register within two working days. Owners must flag blockers before the due date and attach completion evidence when closing an action. The next QBR will report a new quarter and compare these observations; it will not overwrite this period's metrics."
+      },
+      {
+        "id": "acme-qbr-q1:actions:1",
+        "location": "Lines 24 · segment 2",
+        "text": "Distribution: customer project sponsor, nominated tenant administrator, account owner and delivery lead. Prepared from fictional meeting notes and a fictional adoption extract.\n\n---\nFictional demonstration. All parties, metrics and record identifiers are invented."
+      }
+    ]
+  },
+  {
+    "source": "incident-v1",
+    "target": "undated-sop",
+    "type": "full_supersedes",
+    "keys": [
+      "response"
+    ],
+    "reason": "The current document (incident-v1) is an approved policy with effective date 2026-03-02 that establishes formal incident response procedures including acknowledgement targets (four business hours during contracted support coverage), severity definitions, and escalation protocols. The older document (undated-sop) is explicitly an unapproved draft working note with no effective date, no approval record, and contains unresolved open questions about staffing, coverage windows, and severity handling. The current document provides the finalized, authoritative procedures that replace the preliminary planning notes. The older document itself states it should remain as planning history while provenance is investigated, confirming it was never intended as operational policy.",
+    "evidence": [
+      {
+        "id": "incident-v1:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within four business hours during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      },
+      {
+        "id": "undated-sop:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge all critical production incidents within 30 minutes. This document has no verified approval or effective date.\nWorking note recovered from the support planning folder. Author field: not recorded. Approval field: empty. The file contains no effective date or reference to an executed support schedule.\nProposed operating approach: place every critical customer report in a single monitored queue and assign an engineer before the first acknowledgement. The proposed 30-minute target assumes continuous staffing, but the draft has no staffing calculation or approved on-call arrangement. Customer coverage windows are not reconciled with the target.\nOpen points in the margin: Who owns weekends? Does the clock start from the customer email or the monitoring alert? How are severity disagreements handled? Which customer schedules would need amendment? The support lead must resolve these questions and obtain an approval record before this note can guide customer commitments.\nThe document should remain available as planning history while its provenance is investigated. An updated filename or a recent export time would not establish the missing business date."
+      }
+    ]
+  },
+  {
+    "source": "onboarding-v1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "onboarding-v1:kickoff:0",
+        "location": "Heading: Kickoff scheduling and readiness · paragraph 14 · segment 1",
+        "text": "Schedule the customer kickoff within ten business days after signature. Collect tenant domain and administrator contact.\nCustomer Success opens an onboarding record once Sales uploads the executed order and hands over the commercial scope. Riley Foster owns scheduling and records the signature date, customer timezone, delivery lead and nominated tenant administrator. Reserve a 45-minute session and ask the customer to bring the person who can approve domain changes.\nThe invitation contains the agreed scope, a proposed migration window, the readiness questionnaire and the customer action list. If the customer declines every slot within the target window, record the offered dates and the customer's requested alternative. Do not treat customer unavailability as a reason to omit the kickoff record.\nBefore the meeting, Delivery checks the mailbox count, identity provider, shared mailbox ownership and any third-party archival dependency. The kickoff ends with named owners for discovery, security approval and pilot participation. Unresolved prerequisites stay visible in the readiness register; a calendar invitation alone is not evidence of readiness."
+      },
+      {
+        "id": "onboarding-v1:security:0",
+        "location": "Heading: Security and migration approval · paragraph 19 · segment 1",
+        "text": "Complete security checks before granting tenant access. Document the approved migration scope.\nAlex Rivera, the delivery lead, verifies domain ownership and obtains the customer's written approval for the migration permissions. Use a dedicated migration identity with an agreed expiry date. Do not request the customer's permanent administrator password in a spreadsheet, email or meeting transcript.\nThe security checklist covers MFA, least privilege, data location requirements, retention instructions, rollback access and the removal of temporary accounts. A discovery export must show the affected tenant and the date of collection. A security exception requires the customer security owner and internal service owner to agree the compensating control before the pilot.\nThe migration scope lists included mailboxes, shared resources and exclusions. Legal holds and third-party archives receive a separate disposition. The delivery lead stops scheduling a production cutover when access approval or data handling remains unresolved, even if Sales has already suggested a launch date."
+      },
+      {
+        "id": "onboarding-v1:handoff:0",
+        "location": "Heading: Launch acceptance and support handoff · paragraph 24 · segment 1",
+        "text": "Hand the support runbook to the customer success owner after launch.\nThe acceptance pack contains the completed migration reconciliation, unresolved issues, customer administrator training attendance and the rollback closure decision. Customer Success obtains written acceptance or records a qualified acceptance with the specific residual items and owners.\nDuring the first five working days after cutover, Delivery owns migration defects and Customer Success owns adoption questions. The support runbook identifies the tenant, support hours, escalation contact and any customer-specific commercial exceptions. Link the applicable service schedule; do not copy a response-time promise from an unsigned proposal.\nAt the handoff meeting, the support owner demonstrates where to find access approvals and recovery evidence. Customer Success then closes the onboarding record, retaining the signed scope and acceptance message. A reopened migration defect refers to the same engagement identifier so that support volume is not mistaken for a new implementation."
+      }
+    ]
+  },
+  {
+    "source": "backup-v1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "backup-v1:schedule:0",
+        "location": "Heading: Backup schedule and verification · paragraph 14 · segment 1",
+        "text": "Run a full backup every Sunday. Keep the encrypted recovery copy in the designated storage location.\nThe production administrator checks the Sunday job by 09:00 UTC on Monday. The protected set includes configuration exports, customer migration manifests and the support knowledge workspace. Personal downloads, cache directories and local browser profiles are outside this procedure. Encryption keys are held separately from the backup destination, with access restricted to the recovery operators.\nRecord the job identifier, start and finish time, object count and integrity result in the operations log. Compare the protected-object count with the preceding successful run. A variance above 10 percent requires investigation even when the job reports success. A missing or incomplete run creates an incident assigned to the duty engineer; retrying the job does not close the incident until the integrity check passes.\nKeep four weekly recovery points and the latest twelve month-end copies. This retention schedule applies to operational recovery only. A customer-specific hold takes precedence and must identify the affected tenant and record class. Do not overwrite the only known-good copy while investigating corruption."
+      },
+      {
+        "id": "backup-v1:restore:0",
+        "location": "Heading: Restore drills and evidence · paragraph 19 · segment 1",
+        "text": "Test a sample restoration every quarter and record the recovery result.\nUse the isolated recovery tenant for the drill. Jordan Ellis selects a sample configuration export, one migration manifest and a support article without telling the operator which recovery point will be tested. Record both the requested recovery time and the most recent intact object timestamp; these measures answer different questions.\nThe operator restores the sample, checks a checksum or record count, and asks the service owner to confirm that the result is usable. Do not reconnect restored automations or send test notifications to customers. Store the drill report with the job identifiers and scrub any credentials from screenshots.\nA failed test remains an open reliability issue with an owner and target date. The operations lead reviews it at the next weekly service meeting. Closing the issue requires a successful repeat drill, not a description of what should have happened. The quarterly report lists missed drills separately from failed restorations."
+      }
+    ]
+  },
+  {
+    "source": "pricing-copy",
+    "target": "pricing-v1",
+    "type": "duplicate",
+    "keys": [
+      "license",
+      "onboarding",
+      "discount"
+    ],
+    "reason": "Document hashes are identical (4c4822f8fb9ebc6f855847de4fd27f277be5be82e6b5dc3df3947e83b704d9e2), confirming exact content duplication. The current document 'pricing-copy' is a retained export copy of the older 'pricing-v1' with different metadata (title, date, retention status) but identical chunk content across all sections (license, onboarding, discount).",
+    "evidence": [
+      {
+        "id": "pricing-copy:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      },
+      {
+        "id": "pricing-v1:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      },
+      {
+        "id": "pricing-copy:onboarding:0",
+        "location": "Sheet Implementation scope · 6 populated rows · segment 1",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: ONBOARDING-01 | B2: Standard onboarding service fee is USD 2500 per tenant. Scope includes one production migration.\nA3: ONBOARDING-02 | B3: Service SKU IMP-STD | Unit: tenant | Fee currency: USD\nA4: ONBOARDING-03 | B4: The standard package includes a discovery workshop, one migration plan, one pilot batch, a single production cutover and one administrator training session. It assumes up to 100 standard mailboxes, a single source tenant and customer availability for the agreed window. Mailbox remediation, archival exports, endpoint replacement and custom application integrations require a scoped statement of work.\nA5: ONBOARDING-04 | B5: Delivery must approve the readiness assumptions before Sales presents the fee as fixed. If discovery identifies additional work, prepare a change request with units, fees and schedule impact. Do not absorb an undefined second migration into the package because a proposal uses the word support.\nA6: ONBOARDING-05 | B6: Invoice 50 percent at order execution and 50 percent after the agreed acceptance milestone for implementation services, unless the customer order specifies another approved schedule. Recurring subscription billing follows the subscription terms and must not be combined with this milestone schedule."
+      },
+      {
+        "id": "pricing-v1:onboarding:0",
+        "location": "Sheet Implementation scope · 6 populated rows · segment 1",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: ONBOARDING-01 | B2: Standard onboarding service fee is USD 2500 per tenant. Scope includes one production migration.\nA3: ONBOARDING-02 | B3: Service SKU IMP-STD | Unit: tenant | Fee currency: USD\nA4: ONBOARDING-03 | B4: The standard package includes a discovery workshop, one migration plan, one pilot batch, a single production cutover and one administrator training session. It assumes up to 100 standard mailboxes, a single source tenant and customer availability for the agreed window. Mailbox remediation, archival exports, endpoint replacement and custom application integrations require a scoped statement of work.\nA5: ONBOARDING-04 | B5: Delivery must approve the readiness assumptions before Sales presents the fee as fixed. If discovery identifies additional work, prepare a change request with units, fees and schedule impact. Do not absorb an undefined second migration into the package because a proposal uses the word support.\nA6: ONBOARDING-05 | B6: Invoice 50 percent at order execution and 50 percent after the agreed acceptance milestone for implementation services, unless the customer order specifies another approved schedule. Recurring subscription billing follows the subscription terms and must not be combined with this milestone schedule."
+      },
+      {
+        "id": "pricing-copy:discount:0",
+        "location": "Sheet Approval controls · 5 populated rows · segment 1",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: DISCOUNT-01 | B2: Discounts above 10 percent require administrator approval. Customer-specific terms must be documented separately.\nA3: DISCOUNT-02 | B3: The account owner records list rate, requested discount, seat quantity, annualized subscription value, term and the commercial reason in the approval register. Finance checks the margin effect using the current delivery estimate. Approval applies to the submitted quote version and expires when quantity, scope or term changes materially.\nA4: DISCOUNT-03 | B4: No account owner may split a quote into smaller orders to avoid an approval threshold. Promotional pricing, additional implementation work at no charge and extended payment terms count as concessions even when the subscription rate is unchanged. Customer emails asking for a lower price are negotiation inputs, not approval evidence.\nA5: DISCOUNT-04 | B5: The order must attach or reference the approved exception. Store the signed commercial schedule with the quote and approval record. Keep rejected requests in the register for the audit trail. The sales team should verify the active framework before reusing a saved spreadsheet from an earlier quarter."
+      },
+      {
+        "id": "pricing-v1:discount:0",
+        "location": "Sheet Approval controls · 5 populated rows · segment 1",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: DISCOUNT-01 | B2: Discounts above 10 percent require administrator approval. Customer-specific terms must be documented separately.\nA3: DISCOUNT-02 | B3: The account owner records list rate, requested discount, seat quantity, annualized subscription value, term and the commercial reason in the approval register. Finance checks the margin effect using the current delivery estimate. Approval applies to the submitted quote version and expires when quantity, scope or term changes materially.\nA4: DISCOUNT-03 | B4: No account owner may split a quote into smaller orders to avoid an approval threshold. Promotional pricing, additional implementation work at no charge and extended payment terms count as concessions even when the subscription rate is unchanged. Customer emails asking for a lower price are negotiation inputs, not approval evidence.\nA5: DISCOUNT-04 | B5: The order must attach or reference the approved exception. Store the signed commercial schedule with the quote and approval record. Keep rejected requests in the register for the audit trail. The sales team should verify the active framework before reusing a saved spreadsheet from an earlier quarter."
+      }
+    ]
+  },
+  {
+    "source": "access-v1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "access-v1:provisioning:0",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 1",
+        "text": "Provision a workspace account within five business days after approval. Account enablement requires the employee roster.\nThe service desk starts the clock when the request contains a manager approval, legal name, employee identifier, start date, location and requested access profile. Morgan Chen owns the queue; a named deputy checks it at 09:00 and 14:00 UTC each working day. A request received after 15:00 UTC enters the following working day's queue. Missing details return to the requester with the specific field identified; the ticket remains open rather than silently restarting the clock.\n1. Match the approved employee roster against the tenant directory. Check for an existing suspended account before creating a second identity.\n2. Apply the standard employee license, require MFA at first sign-in, and assign only the department groups listed in the approval. Administrator access requires a separate ticket and a second approver.\n3. Send the activation instructions through the approved onboarding channel. Never put a temporary password in a shared document.\n4. Record the request time, approver, account identifier and completion time in the access register. A failed activation stays assigned to the service desk until the employee confirms a successful sign-in."
+      },
+      {
+        "id": "access-v1:provisioning:1",
+        "location": "Heading: Account requests and provisioning · paragraph 14 · segment 2",
+        "text": "Exceptions: contractors receive a sponsor and an expiry date. Accounts without a sponsor do not proceed. If the employee's start date precedes the target completion date, the desk lead must agree a documented temporary arrangement with the manager."
+      },
+      {
+        "id": "access-v1:offboarding:0",
+        "location": "Heading: Leavers and access removal · paragraph 19 · segment 1",
+        "text": "Disable departing employee accounts within 24 hours. Revoke active sessions and retain the audit record for 90 days.\nPeople Operations submits the departure ticket with the last working time in UTC and a manager's instruction for mailbox ownership. For involuntary departures, the duty administrator coordinates the exact suspension time with People Operations and does not notify the user beforehand.\nSuspend sign-in, revoke refresh tokens, remove recovery methods and check forwarding rules. Capture the resulting directory state in the restricted access register. Transfer business records only to the approved custodian. A retention or litigation notice blocks deletion of the underlying mailbox, but it does not block suspension of access.\nThe desk lead reviews overdue removals at the end of each business day. The monthly control sample includes five completed leavers or the entire population when fewer than five employees departed. Evidence contains ticket identifiers and timestamps rather than copied employee messages. An auditor can trace each sampled account back to the roster and manager approval."
+      }
+    ]
+  },
+  {
+    "source": "pricing-v1",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "pricing-v1:license:0",
+        "location": "Sheet Rate schedule · 3 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: Managed workspace subscription | B2: user / month | C2: 24 | D2: Minimum 50 seats; annual billing | E2: Approved\nA3: IMP-STD implementation | B3: tenant | C3: 2500 | D3: Up to 100 mailboxes; one production migration | E3: Approved"
+      },
+      {
+        "id": "pricing-v1:license:1",
+        "location": "Sheet Subscription terms · 6 populated rows · segment 2",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: LICENSE-01 | B2: Standard workspace license pricing is USD 24 per user per month, billed annually. Minimum commitment: 50 seats.\nA3: LICENSE-02 | B3: Rate card FIN-2026-01 | Owner: Morgan Chen, Commercial Operations | Approved by: Casey Brooks, Finance | Currency: USD | Taxes: excluded\nA4: LICENSE-03 | B4: The workspace subscription covers the managed collaboration service and standard administration support. The rate is a fictional Cloudasta managed-service bundle, not a published vendor list price. Billing starts on the service commencement date in the executed order. Seat additions are co-termed to the annual renewal and prorated from the activation date. Reductions take effect at renewal, subject to the minimum commitment.\nA5: LICENSE-04 | B5: Quote the customer legal entity, billing entity, tenant domain, seat quantity, contract term and service start date. Pass-through taxes, third-party archival subscriptions and bespoke integrations are excluded unless the order itemizes them. A customer-specific approved schedule governs that customer's rate for its stated term; it does not update the general rate card."
+      },
+      {
+        "id": "pricing-v1:license:2",
+        "location": "Sheet Subscription terms · 6 populated rows · segment 3",
+        "text": "A6: LICENSE-05 | B6: Renewal pricing requires a fresh quote before the notice deadline in the order. Do not promise a perpetual price lock. A quote remains valid for 30 calendar days unless Finance approves another validity period."
+      }
+    ]
+  },
+  {
+    "source": "legacy-pricing",
+    "target": null,
+    "type": "approve_new",
+    "keys": [],
+    "reason": "The live agent supplied no supported relationship decisions. Confirm this source manually.",
+    "evidence": [
+      {
+        "id": "legacy-pricing:migration:0",
+        "location": "Sheet Rate schedule · 2 populated rows · segment 1",
+        "text": "A1: Item | B1: Unit | C1: USD rate | D1: Commitment / scope | E1: Status\nA2: MIG-2025-PILOT | B2: tenant | C2: 900 | D2: Up to 25 mailboxes; orders by 31 Dec 2025 | E2: Expired"
+      },
+      {
+        "id": "legacy-pricing:migration:1",
+        "location": "Sheet Campaign terms · 6 populated rows · segment 2",
+        "text": "A1: Clause | B1: Commercial terms / operating instruction\nA2: MIGRATION-01 | B2: Legacy migration service costs USD 900 per tenant. This offer ends on December 31, 2025.\nA3: MIGRATION-02 | B3: Campaign reference: MIG-2025-PILOT | Commercial owner: Casey Brooks\nA4: MIGRATION-03 | B4: This limited offer covered a single tenant with no more than 25 standard mailboxes. It included a readiness call, one evening cutover and remote administrator orientation. It excluded calendar remediation, archive import, identity federation changes and tenant consolidation. Customers with more than 25 mailboxes required a separate scoped proposal.\nA5: MIGRATION-04 | B5: Sales could use the campaign only for orders executed and accepted by Delivery before the expiry date. A historical proposal that cites the campaign does not extend the validity period. Existing executed orders retain their signed terms; new work must use the currently approved commercial framework.\nA6: MIGRATION-05 | B6: The July 2026 proposal template still contains a reference to this campaign in its source notes. Commercial Operations must replace that reference before preparing a customer quote. Retain this schedule to explain historical invoices and approved orders from the pilot period."
+      }
+    ]
+  },
+  {
+    "source": "undated-sop",
+    "target": "incident-v1",
+    "type": "coexists",
+    "keys": [],
+    "reason": "The current document is an unapproved draft working note proposing a 30-minute acknowledgement target, but explicitly states it has no verified approval or effective date and cannot guide customer commitments. It should remain as planning history alongside the approved incident-v1 policy which requires 4 business hours acknowledgement. The draft does not replace or supersede the approved policy.",
+    "evidence": [
+      {
+        "id": "undated-sop:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge all critical production incidents within 30 minutes. This document has no verified approval or effective date.\nWorking note recovered from the support planning folder. Author field: not recorded. Approval field: empty. The file contains no effective date or reference to an executed support schedule.\nProposed operating approach: place every critical customer report in a single monitored queue and assign an engineer before the first acknowledgement. The proposed 30-minute target assumes continuous staffing, but the draft has no staffing calculation or approved on-call arrangement. Customer coverage windows are not reconciled with the target.\nOpen points in the margin: Who owns weekends? Does the clock start from the customer email or the monitoring alert? How are severity disagreements handled? Which customer schedules would need amendment? The support lead must resolve these questions and obtain an approval record before this note can guide customer commitments.\nThe document should remain available as planning history while its provenance is investigated. An updated filename or a recent export time would not establish the missing business date."
+      },
+      {
+        "id": "incident-v1:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within four business hours during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      }
+    ]
+  },
+  {
+    "source": "undated-sop",
+    "target": "incident-future",
+    "type": "coexists",
+    "keys": [],
+    "reason": "The current document is an unapproved draft working note proposing a 30-minute acknowledgement target, but explicitly states it has no verified approval or effective date and cannot guide customer commitments. It should remain as planning history alongside the approved incident-future policy (effective 2027-01-01) which requires 1 business hour acknowledgement. The draft does not replace or supersede the approved future policy.",
+    "evidence": [
+      {
+        "id": "undated-sop:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge all critical production incidents within 30 minutes. This document has no verified approval or effective date.\nWorking note recovered from the support planning folder. Author field: not recorded. Approval field: empty. The file contains no effective date or reference to an executed support schedule.\nProposed operating approach: place every critical customer report in a single monitored queue and assign an engineer before the first acknowledgement. The proposed 30-minute target assumes continuous staffing, but the draft has no staffing calculation or approved on-call arrangement. Customer coverage windows are not reconciled with the target.\nOpen points in the margin: Who owns weekends? Does the clock start from the customer email or the monitoring alert? How are severity disagreements handled? Which customer schedules would need amendment? The support lead must resolve these questions and obtain an approval record before this note can guide customer commitments.\nThe document should remain available as planning history while its provenance is investigated. An updated filename or a recent export time would not establish the missing business date."
+      },
+      {
+        "id": "incident-future:response:0",
+        "location": "Heading: Severity and initial response · paragraph 14 · segment 1",
+        "text": "Acknowledge critical production incidents within one business hour during contracted support coverage.\nSeverity 1 means a production outage that prevents a customer from performing a contracted critical workflow without a reasonable workaround. Severity 2 covers material degradation with a workaround. A request to configure a new feature follows the service request queue. The duty engineer records the severity rationale and the customer-reported start time before triage.\nThe acknowledgement confirms an incident identifier, a named owner and the time of the next update. It does not promise a repair deadline. Coverage follows the customer's executed service schedule; a proposal or casual meeting statement cannot extend the support window. Outside coverage, record the receipt and route any emergency request to the duty lead for an explicit decision.\nThe initial triage collects affected tenant, impact, recent change and safe reproduction steps. Preserve diagnostic evidence in the restricted incident record. Avoid copying customer credentials or unnecessary personal records into the shared timeline."
+      }
+    ]
+  }
+]
